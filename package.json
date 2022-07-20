@@ -1,0 +1,23 @@
+{
+  "name": "pasteleria_romi_mutti",
+  "version": "1.0.0",
+  "description": "<h1> Romi Mutti Pasteleria Creativa</h1>\r <p>Este sitio es mi proyecto para el curso de desarrolo web </",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andresjarek/pasteleria_romi_mutti.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andresjarek/pasteleria_romi_mutti/issues"
+  },
+  "homepage": "https://github.com/andresjarek/pasteleria_romi_mutti#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.19"
+  }
+}

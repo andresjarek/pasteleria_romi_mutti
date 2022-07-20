@@ -23,6 +23,10 @@ main {
 
 
 /* MAIN - INDEX */
+
+.nav-link:hover {
+    background-color: rgb(250, 217, 161);
+  }
 /* GRID 1ERA SECTION INDEX */
 .principal__main {
     display: grid;
@@ -112,7 +116,7 @@ button:hover {
 }
 
 .principal__subtitle {
-    font-size: 20px;
+
     text-align: center;
 }
 
@@ -125,9 +129,7 @@ button:hover {
     flex-wrap: wrap;
     padding: 7px;
 }
-.productos__subtitle {
-    font-size: 20px;
-}
+
 .productos__card {
     width: 318px;
     padding: 4px 2px 2px 2px;
@@ -163,13 +165,17 @@ button:hover {
 .contacto__input {
     display: flex;
     justify-content: space-between;
-    background-color: orange;
+    background-color: rgb(217, 248, 196);
     padding: 10px;
 }
+.input__default:focus {
+    color: rgb(243, 120, 120);
+}
+
 
 .contacto__buttons {
     display: flex;
-    padding: 0 25%;
+    padding: 5px 25% 5px 25%;
     flex-direction: row;
     justify-content: space-around;
 }
@@ -188,7 +194,7 @@ button:hover {
 .atencion {
     padding: 5px;
     margin-bottom: 3px;
-    background-color: rgb(25, 165, 72);
+    background-color: rgb(217, 248, 196);
     text-align: center;
 }
 
@@ -235,7 +241,6 @@ button:hover {
 .nosotros__parrafo {
     grid-area: nosotros__parrafo;
     width: 100%;
-    font-size: xx-large;
     text-align: center;
 }
 
@@ -300,7 +305,7 @@ footer {
 /* CLASS ENLACES NAV */
 a {
     text-decoration: none; 
-    color:rgb(124, 82, 192);
+    color:rgb(243, 120, 120);
     font-size: 22px;
 }
 
@@ -347,7 +352,7 @@ h4 {
     .contacto__input {
         display: flex;
         justify-content: space-between;
-        background-color: orange;
+        background-color: rgb(217, 248, 196);
         padding: 10px;
         flex-direction: column;
         flex-wrap: wrap;
@@ -401,7 +406,7 @@ h4 {
     .contacto__input {
         display: flex;
         justify-content: space-between;
-        background-color: orange;
+        background-color:rgb(217, 248, 196);
         padding: 10px;
         flex-direction: column;
         flex-wrap: wrap;
@@ -431,6 +436,42 @@ h4 {
                                 "budin"
                                 "macarons"
                                 "number";
+    }
+
+    .resenas__container {
+        font-size: 17px;
+
+    }
+
+    .nosotros__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:    "nosotros__imagen"
+                                "nosotros__parrafo";
+        column-gap: 5px;
+    }
+    
+    .nosotros__imagen {
+        grid-area: nosotros__imagen;
+        width: 100%;
+    }
+    
+    .nosotros__parrafo {
+        grid-area: nosotros__parrafo;
+        width: 100%;
+        text-align: center;
+    }
+    
+    footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:    "navegacion"
+                                "mapa"
+                                "redes"
+                                "derechos"
+                                
     }
 
     a {
