@@ -5,30 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato:ital,wght@1,300&family=Quicksand&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
         <!-- ICONO -->
         <link rel="shortcut icon" href="recursos/favicon.ico" type="image/x-icon">        
-        <!-- css -->
+        <!-- CSS BOOSTRAP -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"><!-- css -->
         <link rel="stylesheet" href="css/estilos.css">
     <title> Home </title> <!-- titulo de la pestaña -->
 </head>
-<body>
-    <header>
-        <nav class="nav"> 
-            <a href="#">
-                <img class="nav__logo"  src="recursos/favicon.ico" alt="logo-romi-pasteleria"> 
-            </a>
-            <span class="nav__letras">Romi Mutti Pasteleria Creativa</span>
-            <ul class="nav__ul">
-                <li class="nav__items"><a href="#">Home</a></li>
-                <li class="nav__items"><a href="paginas/productos.html">Productos</a></li>
-                <li class="nav__items"><a href="paginas/contactanos.html">Contactanos</a></li>
-                <li class="nav__items"><a href="paginas/resenas.html">Reseñas</a></li>
-                <li class="nav__items"><a href="paginas/nosotros.html">Nosotros</a></li>
-            </ul>
-        </nav>
+<body class="body__default">
+    <header class="header__default" >
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid ">
+              <a class="navbar-brand" href="#"> <img src="recursos/favicon.ico" alt="Logo Romi Mutti"> Romi Mutti Pastelería</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link" href="paginas/productos.html">Productos</a>
+                  <a class="nav-link" href="paginas/contactanos.html">Contactanos</a>
+                  <a class="nav-link" href="paginas/resenas.html">Reseñas</a>
+                  <a class="nav-link" href="paginas/nosotros.html">Nosotros</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+
+
     </header>
     <main>
         <section class="principal__main">
@@ -38,13 +46,13 @@
             <div class="principal__subtitulo"> 
                 <h2 >Eventos - Desayunos - Cumpleaños</h2>
             </div> 
-            <button class=" mainButton principal__boton"> Hacé tu Pedido </button>
+            <button class=" botones mainbutton principal__boton"> Hacé tu Pedido </button>
         </section>
 
-        <section>
-            <article class="end__container">
+        <section class="end">
+            <article class="end__contenedor">
                 <div class="parrafo">
-                    <h3 class="principal__subtitle"> La Torta es uno de los platos fuertes de la mayoría de las 
+                    <h4 class="principal__subtitle"> La Torta es uno de los platos fuertes de la mayoría de las 
                         ocasiones. Cuando llega el momento de cortar esa obra 
                         maestra comestible, todos están al borde de sus asientos esperando para probarlo. 
                         Y siendo una parte tan importante del evento, ¡asegurate de que no solo 
@@ -53,7 +61,7 @@
                         festividades de la vida. Ya sea que esté celebrando una boda, un baby shower o un 
                         cumpleaños, ¡cuente con nosotros para hacer un pastel que se adapte perfectamente a la 
                         ocasión! 
-                    </h3>
+                    </h4>
                 </div>
             
                 <iframe class="end__videos budin" src="https://www.youtube.com/embed/6p2lCg3yaoo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -91,5 +99,7 @@
         <span class="footer__derechos"> Romi Pastelería (c) TODOS LOS DERECHOS RESERVADOS 2022 </span>
         </div>
     </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>  

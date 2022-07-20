@@ -3,61 +3,41 @@
     padding: 0px; /* MARGEN INTERNO */
     box-sizing: border-box;
 }
-body {
-    font-family: 'Quicksand', sans-serif;
-    color:rgb(124, 82, 192);
-    background-color:  white;
+body { 
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.body__default {
+    font-family: 'Bebas Neue', cursive;
+    COLOR: rgb(243, 120, 120);
+    background-color:  rgb(249, 249, 197);
+}
+.header__default {
+    background-color: 
+    rgb(249, 249, 197);
 }
 main {
-    background-color: orange;
+    background-color:rgb(249, 249, 197);
 }
 
-/* BARRA NAVEGACION */
-.nav {
-    background-color: rgb(250, 249, 245);
-    display: flex;
-    align-items: center;
-}
-/* LOGO ROMI PASTELERIA */
-.nav__logo { 
-    width: 50px;
-    height: 50px;
-}
-/* TEXTO ROMI MUTTI PASTELERIA NAV */
-.nav__letras {
-    font-family: 'Dancing Script', cursive;
-    font-size: 25px;
-    align-self: center;
-    padding: 0 1%;
-}
-/* UL DE NAV */
 
-.nav__ul {
-    display: flex;
-    list-style: none;
-    justify-content: flex-end;
-}
-/* ITEMS DE NAV */
-.nav__items { 
-    font-size: 25px;
-    padding: 10px;
-}
-/*  DE ITEMS */
-.nav__items a {
-    color: rgb(124, 82, 192);
-    text-decoration: none;
-}
 
 /* MAIN - INDEX */
+
+.nav-link:hover {
+    background-color: rgb(250, 217, 161);
+  }
 /* GRID 1ERA SECTION INDEX */
 .principal__main {
     display: grid;
-    background-image: url("../recursos/background.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.905)),
+    url("../recursos/background.jpg");
+    min-height: 70vh;
     width: 100%;
     background-size: cover;
     background-position: center;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 2fr 1fr 2fr;
+    grid-template-rows: auto;
     gap: 20px;
     padding: 20px 0 20px 0;
 
@@ -72,11 +52,10 @@ main {
 }
 .principal__subtitulo {
     grid-column: 2/3;
-    grid-row: 2/2;
+    grid-row: 1/2;
     display: flex;
     justify-content: center;
-    text-align: center;
-
+    align-items: flex-end;
 }
 
 .principal__boton {
@@ -85,21 +64,33 @@ main {
 }
 
 /* BOTON HACE TU PEDIDO */
-.boton button {
-    width: 50px;
-    height: 10px;
-    font-size: 27px;
+.mainbutton {
+    width: 80vw;
+    height: 10vh;
+    font-size: 30px;
 }
-.mainButton {
-    background-color: rgb(124, 82, 192);
-    border: rgb(124, 82, 192) solid 10px;
-    border-radius: 15px;
-    color:rgb(250, 249, 245); 
+
+button:hover {
+    background-image: linear-gradient(100deg, rgb(249, 249, 197), rgb(250, 217, 161));
+    /* transform: translate(10px, 10px); este es para mover el elemento*/
+    transform: scale(1.05,1.05);
+    transition: all 1s;
+} 
+
+.botones {
+    background-color: rgb(250, 217, 161);
+    border: rgba(250, 217, 161, 0.918) solid 3px;
+    border-radius: 10px;
+    color:rgb(243, 120, 120); 
+
 }
 
 /* GRID 2DA SECTION INDEX */
+.end {
+    margin: 10px;
+}
 
-.end__container {
+.end__contenedor {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 30%, 1fr;
@@ -110,29 +101,22 @@ main {
 
 .parrafo {
     grid-area: parrafo;
-    background-color: white;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    background-color: rgb(249, 249, 197);
+    
 }
 .budin {
     grid-area: budin;
-    padding: 5px;
 
 }
 .macarons {
     grid-area: macarons;
-    padding: 5px;
 }
 .number {
     grid-area: number;
-    padding: 5px;
 }
 
-
-
-
 .principal__subtitle {
-    font-size: 20px;
+
     text-align: center;
 }
 
@@ -145,9 +129,7 @@ main {
     flex-wrap: wrap;
     padding: 7px;
 }
-.productos__subtitle {
-    font-size: 20px;
-}
+
 .productos__card {
     width: 318px;
     padding: 4px 2px 2px 2px;
@@ -169,7 +151,7 @@ main {
     text-align: center;
     margin: 25px 0 25px 0;
     padding: 3px;
-    background-color: white;
+    background-color: rgb(249, 249, 197);
 }
 
 /* CONTACTANOS */
@@ -183,13 +165,17 @@ main {
 .contacto__input {
     display: flex;
     justify-content: space-between;
-    background-color: orange;
+    background-color: rgb(217, 248, 196);
     padding: 10px;
 }
+.input__default:focus {
+    color: rgb(243, 120, 120);
+}
+
 
 .contacto__buttons {
     display: flex;
-    padding: 0 25%;
+    padding: 5px 25% 5px 25%;
     flex-direction: row;
     justify-content: space-around;
 }
@@ -208,7 +194,7 @@ main {
 .atencion {
     padding: 5px;
     margin-bottom: 3px;
-    background-color: rgb(25, 165, 72);
+    background-color: rgb(217, 248, 196);
     text-align: center;
 }
 
@@ -255,7 +241,6 @@ main {
 .nosotros__parrafo {
     grid-area: nosotros__parrafo;
     width: 100%;
-    font-size: xx-large;
     text-align: center;
 }
 
@@ -320,7 +305,7 @@ footer {
 /* CLASS ENLACES NAV */
 a {
     text-decoration: none; 
-    color:rgb(124, 82, 192);
+    color:rgb(243, 120, 120);
     font-size: 22px;
 }
 
@@ -337,17 +322,6 @@ h4 {
     
     }
 
-    .nav__letras {
-        font-family: 'Dancing Script', cursive;
-        font-size: 25px;
-        align-self: center;
-        padding: 0 1%;
-    }
-
-    .nav__items { 
-        font-size: 4px;
-        padding: 2px;
-    }
 
     .principal__main {
         grid-template-columns: 1fr 6fr 1fr;
@@ -378,7 +352,7 @@ h4 {
     .contacto__input {
         display: flex;
         justify-content: space-between;
-        background-color: orange;
+        background-color: rgb(217, 248, 196);
         padding: 10px;
         flex-direction: column;
         flex-wrap: wrap;
@@ -389,7 +363,7 @@ h4 {
         display: flex;
     }
 
-    .end__container {
+    .end__contenedor {
 
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -404,15 +378,7 @@ h4 {
         height: 50vh;
     
     }
-    .nav__logo { 
-        width: 10vw;
-        height: 10vh;
-    }
-    .nav__ul {
-        display: flex;
-        list-style: none;
-        flex-wrap: wrap;
-    }
+    
     footer {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -440,7 +406,7 @@ h4 {
     .contacto__input {
         display: flex;
         justify-content: space-between;
-        background-color: orange;
+        background-color:rgb(217, 248, 196);
         padding: 10px;
         flex-direction: column;
         flex-wrap: wrap;
@@ -453,33 +419,16 @@ h4 {
     .end__videos {
         width: 100vw;
         height: 50vh;
-    
-    }
-    .nav {
-        display: flex;
-    }
-
-    .nav__logo { 
-        width: 10vw;
-        height: 10vh;
-    }
-    
-    .nav__ul {
-        display: flex;
-        list-style: none;
-        justify-content: flex-end;
-        flex-direction: column;
     }
 
     .principal__main {
 
         grid-template-columns: 20% 60% 20%;
         grid-template-rows: 80% 40% 80%;
-
         padding: 20px 0 20px 0;
 
     }
-    .end__container {
+    .end__contenedor {
 
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -487,6 +436,42 @@ h4 {
                                 "budin"
                                 "macarons"
                                 "number";
+    }
+
+    .resenas__container {
+        font-size: 17px;
+
+    }
+
+    .nosotros__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:    "nosotros__imagen"
+                                "nosotros__parrafo";
+        column-gap: 5px;
+    }
+    
+    .nosotros__imagen {
+        grid-area: nosotros__imagen;
+        width: 100%;
+    }
+    
+    .nosotros__parrafo {
+        grid-area: nosotros__parrafo;
+        width: 100%;
+        text-align: center;
+    }
+    
+    footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:    "navegacion"
+                                "mapa"
+                                "redes"
+                                "derechos"
+                                
     }
 
     a {
