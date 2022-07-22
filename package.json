@@ -4,7 +4,9 @@
   "description": "<h1> Romi Mutti Pasteleria Creativa</h1>\r <p>Este sitio es mi proyecto para el curso de desarrolo web </",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/prueba.scss css/pruebacss.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "repository": {
     "type": "git",
