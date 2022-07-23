@@ -1,0 +1,23 @@
+.nosotros {
+    padding: 16px;
+    
+    &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:    "nosotros__imagen nosotros__parrafo"
+                            "nosotros__imagen nosotros__parrafo";
+    column-gap: 5px;
+    }
+
+    &__imagen {
+        grid-area: nosotros__imagen;
+        width: 100%;
+    }
+
+    &__parrafo {
+        grid-area: nosotros__parrafo;
+        width: 100%;
+        text-align: center;
+    }
+}

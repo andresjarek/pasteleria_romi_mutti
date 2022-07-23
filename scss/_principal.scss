@@ -1,0 +1,27 @@
+.principal__main {
+    display: grid;
+    background-image: linear-gradient(rgba(90, 85, 85, 0.7), rgba(66, 54, 30, 0.905)),
+    url("../recursos/background.jpg");
+    min-height: 70vh;
+    width: 98vw;
+    background-size:cover;
+    background-position: center;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 35% 65%;
+    
+    &__titulo {
+        grid-column:2/3;
+        grid-row: 1/2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__boton {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+}
+
+
+
