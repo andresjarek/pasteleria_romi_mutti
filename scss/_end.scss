@@ -1,0 +1,35 @@
+/* GRID 2DA SECTION INDEX */
+.end {
+    margin: 10px;
+
+    &__contenedor {
+        display: grid;
+        grid-template-columns: 33% 34% 33%;
+        grid-template-rows: 0,3fr, 1fr;
+        grid-template-areas:    "parrafo parrafo parrafo"
+                                "budin macarons number";
+
+            .parrafo__gridarea {
+                grid-area: parrafo;
+                background-color: rgb(249, 249, 197);
+                width: 98vw;
+                background-size:cover;
+                background-position: center;
+                
+                &__estilos {
+                    text-align: center;
+                    align-items: center;
+                } 
+            }
+            .budin__gridarea {
+                grid-area: budin;
+            
+            }
+            .macarons__gridarea {
+                grid-area: macarons;
+            }
+            .number__gridarea {
+                grid-area: number;
+            }
+    }
+}

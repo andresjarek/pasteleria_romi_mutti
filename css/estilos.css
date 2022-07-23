@@ -1,476 +1,288 @@
-*{
-    margin: 0px; /* MARGEN EXTERNO */
-    padding: 0px; /* MARGEN INTERNO */
-}
-
-.body__default {
-    font-family: 'Bebas Neue', cursive;
-    color:#ea93bf;
-    background-color: #fff7f4;
-}
-.header__default {
-    background-color: #fff7f4;
-}
-main {
-    background-color:#fff7f4;
-}
-
-
-
-/* MAIN - INDEX */
-
-.nav-link:hover {
-    background-color:#ea93bf;
-}
-
-/* GRID 1ERA SECTION INDEX */
-.principal__main {
-    display: grid;
-    background-image: linear-gradient(rgba(90, 85, 85, 0.7), rgba(66, 54, 30, 0.905)),
-    url("../recursos/background.jpg");
-    min-height: 70vh;
-    width: 98vw;
-    background-size:cover;
-    background-position: center;
-    grid-template-columns: 30% 30% 30%;
-    grid-template-rows: 35% 65%;
-
-}
-.principal__titulo {
-    grid-column:2/3;
-    grid-row: 1/2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.principal__boton {
-    grid-column: 2/3;
-    grid-row: 2/3;
-}
-
-/* BOTON HACE TU PEDIDO */
-.mainbutton {
-    width: 80vw;
-    height: 10vh;
-    font-size: 30px;
-}
-
-button:hover {
-    background-image: linear-gradient(100deg, #9f82b1, #bcb4c4);
-    /* transform: translate(10px, 10px); este es para mover el elemento*/
-    transform: scale(1.05,1.05);
-    transition: all 1s;
-} 
-
-.botones {
-    background-color:#9f81b2;
-    border:#9f81b2 solid 3px;
-    border-radius: 10px;
-    color:#fff7f4; 
-
-}
-
-/* GRID 2DA SECTION INDEX */
-.end {
-    margin: 10px;
-}
-
-.end__contenedor {
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-template-rows: 0,3fr, 1fr;
-    grid-template-areas:    "parrafo parrafo parrafo"
-                            "budin macarons number";
-    
-}
-
-.parrafo {
-    grid-area: parrafo;
-    background-color: rgb(249, 249, 197);
-    width: 98vw;
-    background-size:cover;
-    background-position: center;
-}
-.budin {
-    grid-area: budin;
-
-}
-.macarons {
-    grid-area: macarons;
-}
-.number {
-    grid-area: number;
-}
-
-.parrafo__estilos {
-
-    text-align: center;
-    align-items: center;
-}
-
-
-/*  PRODUCTOS */
-
-.productos__container { 
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 7px;
-}
-
-.productos__card {
-    width: 318px;
-    padding: 4px 2px 2px 2px;
-    margin: 1px;
-    text-align: center;
-    border-radius: 10px;
-    border-color: orange;
-    border-style:hidden;
-    background: linear-gradient(to top, rgb(124, 82, 192), white 80%, orange);
-}
-.productos__imagen { /* TAMAÑO FOTOS PRODUCTOS */
-    width: 100%;
-    height: 94%;
-    border-radius: 10px;
-}
-.productos__parrafo {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin: 25px 0 25px 0;
-    padding: 3px;
-    background-color: rgb(249, 249, 197);
-}
-
-/* CONTACTANOS */
-
 .contacto__container {
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    height: 100%;
-}
-.contacto__input {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  height: 100%; }
+  .contacto__container__input {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(217, 248, 196);
-    padding: 10px;
-}
-.input__default:focus {
-    color: rgb(243, 120, 120);
-}
-
-
-.contacto__buttons {
+    background-color: #d9f8c4;
+    padding: 10px; }
+    .contacto__container__input__default:focus {
+      color: #f37878; }
+  .contacto__container__buttons {
     display: flex;
     padding: 5px 25% 5px 25%;
     flex-direction: row;
-    justify-content: space-around;
-}
-
-.contacto__datos {
-    justify-content: flex-start ;
-
-}
-.contacto__areas {
+    justify-content: space-around; }
+  .contacto__container__datos {
+    justify-content: flex-start; }
+  .contacto__container__areas {
     display: flex;
-    justify-self: end; 
-    width: 100%;
-    
-}
-/* FRANJA PEDIDOS HASTA JUEVES 17 HS */
+    justify-self: end;
+    width: 100%; }
+
 .atencion {
-    padding: 5px;
-    margin-bottom: 3px;
-    background-color: rgb(217, 248, 196);
-    text-align: center;
-}
+  padding: 5px;
+  margin-bottom: 3px;
+  background-color: #d9f8c4;
+  text-align: center; }
 
-/* RESEÑAS */
-
-.resenas__container {
+/* GRID 2DA SECTION INDEX */
+.end {
+  margin: 10px; }
+  .end__contenedor {
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas:    "resenas1" 
-                            "resenas2" 
-                            "resenas3" 
-                            "resenas4" 
-                            "resenas5" 
-                            "resenas6" 
-                            "resenas7";
-    row-gap: 16px;
-    font-family: 'Dancing Script', cursive;
-    font-size: 25px;
-    width: 100%;
-    padding: 10px;
-}
-
-/* NOSOTROS */
-
-.nosotros {
-    padding: 16px;
-}
-
-.nosotros__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:    "nosotros__imagen nosotros__parrafo"
-                            "nosotros__imagen nosotros__parrafo";
-    column-gap: 5px;
-}
-
-.nosotros__imagen {
-    grid-area: nosotros__imagen;
-    width: 100%;
-}
-
-.nosotros__parrafo {
-    grid-area: nosotros__parrafo;
-    width: 100%;
-    text-align: center;
-}
-
-label {
-    font-size: 110%;
-}
-
-/* TITULOS DE PAGINAS */
-
-.titulos-solapas {
-    font-size: 20px;
-    text-align: center;
-}
-
-/* FOOTER */
+    grid-template-columns: 33% 34% 33%;
+    grid-template-rows: 0,3fr, 1fr;
+    grid-template-areas: "parrafo parrafo parrafo" "budin macarons number"; }
+    .end__contenedor .parrafo__gridarea {
+      grid-area: parrafo;
+      background-color: #f9f9c5;
+      width: 98vw;
+      background-size: cover;
+      background-position: center; }
+      .end__contenedor .parrafo__gridarea__estilos {
+        text-align: center;
+        align-items: center; }
+    .end__contenedor .budin__gridarea {
+      grid-area: budin; }
+    .end__contenedor .macarons__gridarea {
+      grid-area: macarons; }
+    .end__contenedor .number__gridarea {
+      grid-area: number; }
 
 footer {
-    display: grid;
-    grid-template-columns:1fr 2fr 1fr;
-    grid-template-areas: "navegacion mapa mapa redes"
-                        "navegacion mapa mapa derechos";
-    background-color: rgb(250, 249, 245);
-    padding: 6px;
-}
-.footer__navegacion ul li {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: "navegacion mapa mapa redes" "navegacion mapa mapa derechos";
+  background-color: #faf9f5;
+  padding: 6px; }
+  footer .footer__navegacion ul li {
     list-style: none;
     font-size: 16px;
-    padding-top: 6px;
-}
-
-.footer__mapa {
+    padding-top: 6px; }
+  footer .footer__mapa {
     grid-area: mapa;
-    justify-self: center;
-}
-
-.footer__redes_container {
+    justify-self: center; }
+  footer .footer__redes_container {
     grid-area: redes;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-}
-
-.footer__redes {
-    padding: 1px;
-}
-
-.footer__derechos {
+    flex-direction: column; }
+  footer .footer__redes {
+    padding: 1px; }
+  footer .footer__derechos {
     grid-area: derechos;
     display: flex;
     justify-content: flex-start;
     text-decoration: underline;
-    color:rgb(11, 20, 5)
-
-}
-.footer__iconos {
+    color: #0b1405; }
+  footer .footer__iconos {
     width: 70px;
     height: 70px;
-    margin: 12px;
-}
+    margin: 12px; }
 
+.nav-link:hover {
+  background-color: #ea93bf; }
+
+.nosotros {
+  padding: 16px; }
+  .nosotros__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "nosotros__imagen nosotros__parrafo" "nosotros__imagen nosotros__parrafo";
+    column-gap: 5px; }
+  .nosotros__imagen {
+    grid-area: nosotros__imagen;
+    width: 100%; }
+  .nosotros__parrafo {
+    grid-area: nosotros__parrafo;
+    width: 100%;
+    text-align: center; }
+
+.principal__main {
+  display: grid;
+  background-image: linear-gradient(rgba(90, 85, 85, 0.7), rgba(66, 54, 30, 0.905)), url("../recursos/background.jpg");
+  min-height: 70vh;
+  width: 98vw;
+  background-size: cover;
+  background-position: center;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 35% 65%; }
+  .principal__main__titulo {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .principal__main__boton {
+    grid-column: 2/3;
+    grid-row: 2/3; }
+
+.productos__parrafo {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 25px 0 25px 0;
+  padding: 3px;
+  background-color: #f9f9c5; }
+
+.resenas__container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: "resenas1"  "resenas2"  "resenas3"  "resenas4"  "resenas5"  "resenas6"  "resenas7";
+  row-gap: 16px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 25px;
+  width: 100%;
+  padding: 10px; }
+
+@media only screen and (min-width: 900px) {
+  .principal__main {
+    grid-template-columns: 1fr 6fr 1fr; }
+  .principal__titulo {
+    display: flex;
+    font-size: 25px; }
+  .end {
+    grid-template-areas: "parrafo parrafo parrafo" "budin macarons number"; }
+  end__parrafo {
+    text-align: center;
+    width: 100%; }
+  end__videos {
+    width: 100%;
+    height: 50vh; }
+  a {
+    font-size: 20px; } }
+
+@media only screen and (max-width: 899px) {
+  .principal__main {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto; }
+  .contacto__input {
+    display: flex;
+    justify-content: space-between;
+    background-color: #d9f8c4;
+    padding: 10px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center; }
+  .contacto__datos {
+    justify-content: center;
+    display: flex; }
+  .end__contenedor {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "parrafo" "budin" "macarons" "number"; }
+  .end__videos {
+    width: 100vw;
+    height: 50vh; }
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "navegacion mapa"  "redes redes"  "derechos derechos"; }
+  .footer__derechos {
+    display: flexbox;
+    grid-area: derechos;
+    justify-content: center; }
+  .footer__iconos {
+    width: 40px;
+    height: 40px; }
+  a {
+    font-size: 16px; } }
+
+@media only screen and (max-width: 479px) {
+  .contacto__input {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center; }
+  .contacto__datos {
+    justify-content: center;
+    display: flex; }
+  .end__videos {
+    width: 100vw;
+    height: 50vh; }
+  .principal__main {
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 80% 40% 80%;
+    padding: 20px 0 20px 0; }
+  .end__contenedor {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "parrafo" "budin" "macarons" "number"; }
+  .resenas__container {
+    font-size: 17px; }
+  .nosotros__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "nosotros__imagen" "nosotros__parrafo";
+    column-gap: 5px; }
+  .nosotros__imagen {
+    grid-area: nosotros__imagen;
+    width: 100%; }
+  .nosotros__parrafo {
+    grid-area: nosotros__parrafo;
+    width: 100%;
+    text-align: center; }
+  footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "navegacion" "mapa" "redes" "derechos"; }
+  a {
+    font-size: 16px; } }
+
+* {
+  margin: 0px;
+  /* MARGEN EXTERNO */
+  padding: 0px;
+  /* MARGEN INTERNO */ }
+
+.body__default {
+  font-family: 'Bebas Neue', cursive;
+  color: #ea93bf;
+  background-color: #fff7f4; }
+
+.header__default {
+  background-color: #fff7f4; }
+
+main {
+  background-color: #fff7f4; }
+
+.mainbutton {
+  width: 80vw;
+  height: 10vh;
+  font-size: 30px; }
+
+button:hover {
+  background-image: linear-gradient(100deg, #9f82b1, #bcb4c4);
+  /* transform: translate(10px, 10px); este es para mover el elemento*/
+  transform: scale(1.05, 1.05);
+  transition: all 1s; }
+
+.botones {
+  background-color: #9f81b2;
+  border: #9f81b2 solid 3px;
+  border-radius: 10px;
+  color: #fff7f4; }
+
+label {
+  font-size: 110%; }
+
+/* TITULOS DE PAGINAS */
 /* CLASS ENLACES NAV */
 a {
-    text-decoration: none; 
-    color:rgb(243, 120, 120);
-    font-size: 22px;
-}
+  text-decoration: none;
+  color: #f37878;
+  font-size: 22px; }
 
 h4 {
-    font-size: 20px;
-}
-
-@media only screen and (min-width:900px) {
-
-    
-
-    .end__videos {
-        width: 100%;
-        height: 50vh;
-    
-    }
-
-
-    .principal__main {
-        grid-template-columns: 1fr 6fr 1fr;
-    }
-
-    .principal__titulo {
-        display: flex;
-        font-size: 25px;
-    }
-
-    .end__parrafo {
-        text-align: center;
-        width: 100%;
-    }
-
-    .end {
-        grid-template-areas:    "parrafo parrafo parrafo"
-                                "budin macarons number";
-                                
-    }
-
-    a {
-        font-size: 20px;
-    }
-}
-
-@media only screen and  (max-width:899px) {
-    
-    .principal__main {
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-template-rows: auto;
-        }
-
-    .contacto__input {
-        display: flex;
-        justify-content: space-between;
-        background-color: rgb(217, 248, 196);
-        padding: 10px;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: center;
-    }
-    .contacto__datos {
-        justify-content: center;
-        display: flex;
-    }
-
-    .end__contenedor {
-
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas:    "parrafo"
-                                "budin"
-                                "macarons"
-                                "number";
-    }
-
-    .end__videos {
-        width: 100vw;
-        height: 50vh;
-    
-    }
-    
-    footer {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas:    "navegacion mapa" 
-                                "redes redes" 
-                                "derechos derechos"
-    }
-    .footer__derechos {
-        display: flexbox;
-        grid-area: derechos;
-        justify-content: center;
-
-    }
-    .footer__iconos {
-        width: 40px;
-        height: 40px;
-
-    }
-    a {
-        font-size: 16px;
-    }
-}
-@media only screen and (max-width:479px) {
-    .contacto__input {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: center;
-    }
-    .contacto__datos {
-        justify-content: center;
-        display: flex;
-    }
-    .end__videos {
-        width: 100vw;
-        height: 50vh;
-    }
-
-    .main {
-
-        grid-template-columns: 20% 60% 20%;
-        grid-template-rows: 80% 40% 80%;
-        padding: 20px 0 20px 0;
-
-    }
-    .end__contenedor {
-
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas:    "parrafo"
-                                "budin"
-                                "macarons"
-                                "number";
-    }
-
-    .resenas__container {
-        font-size: 17px;
-
-    }
-
-    .nosotros__container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas:    "nosotros__imagen"
-                                "nosotros__parrafo";
-        column-gap: 5px;
-    }
-    
-    .nosotros__imagen {
-        grid-area: nosotros__imagen;
-        width: 100%;
-    }
-    
-    .nosotros__parrafo {
-        grid-area: nosotros__parrafo;
-        width: 100%;
-        text-align: center;
-    }
-    
-    footer {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas:    "navegacion"
-                                "mapa"
-                                "redes"
-                                "derechos"
-                                
-    }
-
-    a {
-        font-size: 16px;
-    }
-}
+  font-size: 20px; }

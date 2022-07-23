@@ -1,0 +1,69 @@
+@import "contactanos";
+@import "end";
+@import "footer";
+@import "header";
+@import "nav";
+@import "nosotros";
+@import "principal";
+@import "productos";
+@import "resenas";
+@import "mediaqueries";
+
+*{
+    margin: 0px; /* MARGEN EXTERNO */
+    padding: 0px; /* MARGEN INTERNO */
+}
+
+.body__default {
+    font-family: 'Bebas Neue', cursive;
+    color:#ea93bf;
+    background-color: #fff7f4;
+}
+
+.header__default {
+    background-color: #fff7f4;
+}
+
+main {
+    background-color:#fff7f4;
+}
+
+.mainbutton {
+    width: 80vw;
+    height: 10vh;
+    font-size: 30px;
+}
+
+button:hover {
+    background-image: linear-gradient(100deg, #9f82b1, #bcb4c4);
+    /* transform: translate(10px, 10px); este es para mover el elemento*/
+    transform: scale(1.05,1.05);
+    transition: all 1s;
+} 
+
+
+.botones {
+    background-color:#9f81b2;
+    border:#9f81b2 solid 3px;
+    border-radius: 10px;
+    color:#fff7f4; 
+}
+
+label {
+    font-size: 110%;
+}
+
+/* TITULOS DE PAGINAS */
+
+
+/* CLASS ENLACES NAV */
+a {
+    text-decoration: none; 
+    color:rgb(243, 120, 120);
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 20px;
+}
+

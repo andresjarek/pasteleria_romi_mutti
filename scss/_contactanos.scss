@@ -1,0 +1,41 @@
+.contacto__container {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+
+    &__input {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(217, 248, 196);
+        padding: 10px;
+    
+        &__default:focus {
+            color: rgb(243, 120, 120);
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        padding: 5px 25% 5px 25%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    &__datos {
+        justify-content: flex-start ;
+
+    }
+    &__areas {
+        display: flex;
+        justify-self: end; 
+        width: 100%;
+        
+    }
+}
+.atencion {
+    padding: 5px;
+    margin-bottom: 3px;
+    background-color: rgb(217, 248, 196);
+    text-align: center;
+}

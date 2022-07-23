@@ -1,0 +1,18 @@
+.resenas__container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:    "resenas1" 
+                            "resenas2" 
+                            "resenas3" 
+                            "resenas4" 
+                            "resenas5" 
+                            "resenas6" 
+                            "resenas7";
+    row-gap: 16px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    width: 100%;
+    padding: 10px;
+}
+
