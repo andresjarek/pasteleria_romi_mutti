@@ -1,56 +1,5 @@
-.contacto__container {
-  margin: 10px;
-  display: flex;
-  justify-content: center;
-  height: 100%; }
-  .contacto__container__input {
-    display: flex;
-    justify-content: space-between;
-    background-color: #d9f8c4;
-    padding: 10px; }
-    .contacto__container__input__default:focus {
-      color: #f37878; }
-  .contacto__container__buttons {
-    display: flex;
-    padding: 5px 25% 5px 25%;
-    flex-direction: row;
-    justify-content: space-around; }
-  .contacto__container__datos {
-    justify-content: flex-start; }
-  .contacto__container__areas {
-    display: flex;
-    justify-self: end;
-    width: 100%; }
-
-.atencion {
-  padding: 5px;
-  margin-bottom: 3px;
-  background-color: #d9f8c4;
-  text-align: center; }
-
-/* GRID 2DA SECTION INDEX */
-.end {
-  margin: 10px; }
-  .end__contenedor {
-    display: grid;
-    grid-template-columns: 33% 34% 33%;
-    grid-template-rows: 0,3fr, 1fr;
-    grid-template-areas: "parrafo parrafo parrafo" "budin macarons number"; }
-    .end__contenedor .parrafo__gridarea {
-      grid-area: parrafo;
-      background-color: #f9f9c5;
-      width: 98vw;
-      background-size: cover;
-      background-position: center; }
-      .end__contenedor .parrafo__gridarea__estilos {
-        text-align: center;
-        align-items: center; }
-    .end__contenedor .budin__gridarea {
-      grid-area: budin; }
-    .end__contenedor .macarons__gridarea {
-      grid-area: macarons; }
-    .end__contenedor .number__gridarea {
-      grid-area: number; }
+.nav-link:hover {
+  background-color: #ea93bf; }
 
 footer {
   display: grid;
@@ -84,8 +33,110 @@ footer {
     height: 70px;
     margin: 12px; }
 
-.nav-link:hover {
-  background-color: #ea93bf; }
+.principal {
+  display: grid;
+  background-image: linear-gradient(rgba(90, 85, 85, 0.7), rgba(66, 54, 30, 0.905)), url("../recursos/background.jpg");
+  min-height: 70vh;
+  width: 98vw;
+  background-size: cover;
+  background-position: center;
+  grid-template-columns: 33% 34% 33%;
+  grid-template-rows: 35% 65%; }
+  .principal__titulo {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .principal__boton {
+    grid-column: 2/3;
+    grid-row: 2/3; }
+
+/* GRID 2DA SECTION INDEX */
+.end {
+  margin: 0px; }
+
+.end__contenedor {
+  display: grid;
+  grid-template-columns: 33% 34% 33%;
+  grid-template-rows: 0,3fr, 1fr;
+  grid-template-areas: "parrafo parrafo parrafo" "budin macarons number"; }
+
+.parrafo__gridarea {
+  grid-area: parrafo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9c5;
+  width: 98vw;
+  background-size: cover;
+  background-position: center; }
+
+.parrafo__estilos {
+  text-align: center;
+  align-items: center; }
+
+.budin__gridarea {
+  grid-area: budin; }
+
+.macarons__gridarea {
+  grid-area: macarons; }
+
+.number__gridarea {
+  grid-area: number; }
+
+.end__videos {
+  width: 100%;
+  height: 50vh; }
+
+.productos__parrafo {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 25px 0 25px 0;
+  padding: 3px;
+  background-color: #f9f9c5; }
+
+.contacto__container {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  height: 100%; }
+  .contacto__container__input {
+    display: flex;
+    justify-content: space-between;
+    background-color: #d9f8c4;
+    padding: 10px; }
+    .contacto__container__input__default:focus {
+      color: #f37878; }
+  .contacto__container__buttons {
+    display: flex;
+    padding: 5px 25% 5px 25%;
+    flex-direction: row;
+    justify-content: space-around; }
+  .contacto__container__datos {
+    justify-content: flex-start; }
+  .contacto__container__areas {
+    display: flex;
+    justify-self: end;
+    width: 100%; }
+
+.atencion {
+  padding: 5px;
+  margin-bottom: 3px;
+  background-color: #d9f8c4;
+  text-align: center; }
+
+.resenas__container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: "resenas1"  "resenas2"  "resenas3"  "resenas4"  "resenas5"  "resenas6"  "resenas7";
+  row-gap: 16px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 25px;
+  width: 100%;
+  padding: 10px; }
 
 .nosotros {
   padding: 16px; }
@@ -103,46 +154,8 @@ footer {
     width: 100%;
     text-align: center; }
 
-.principal__main {
-  display: grid;
-  background-image: linear-gradient(rgba(90, 85, 85, 0.7), rgba(66, 54, 30, 0.905)), url("../recursos/background.jpg");
-  min-height: 70vh;
-  width: 98vw;
-  background-size: cover;
-  background-position: center;
-  grid-template-columns: 30% 30% 30%;
-  grid-template-rows: 35% 65%; }
-  .principal__main__titulo {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  .principal__main__boton {
-    grid-column: 2/3;
-    grid-row: 2/3; }
-
-.productos__parrafo {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin: 25px 0 25px 0;
-  padding: 3px;
-  background-color: #f9f9c5; }
-
-.resenas__container {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  grid-template-areas: "resenas1"  "resenas2"  "resenas3"  "resenas4"  "resenas5"  "resenas6"  "resenas7";
-  row-gap: 16px;
-  font-family: 'Dancing Script', cursive;
-  font-size: 25px;
-  width: 100%;
-  padding: 10px; }
-
 @media only screen and (min-width: 900px) {
-  .principal__main {
+  .principal {
     grid-template-columns: 1fr 6fr 1fr; }
   .principal__titulo {
     display: flex;
@@ -159,7 +172,7 @@ footer {
     font-size: 20px; } }
 
 @media only screen and (max-width: 899px) {
-  .principal__main {
+  .principal {
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: auto; }
   .contacto__input {
@@ -209,7 +222,7 @@ footer {
   .end__videos {
     width: 100vw;
     height: 50vh; }
-  .principal__main {
+  .principal {
     grid-template-columns: 20% 60% 20%;
     grid-template-rows: 80% 40% 80%;
     padding: 20px 0 20px 0; }
