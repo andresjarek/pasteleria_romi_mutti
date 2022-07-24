@@ -1,34 +1,18 @@
 .nav-link:hover {
   background-color: #ea93bf; }
 
-footer {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-areas: "navegacion mapa mapa redes" "navegacion mapa mapa derechos";
-  background-color: #faf9f5;
-  padding: 6px; }
-  footer .footer__navegacion ul li {
-    list-style: none;
-    font-size: 16px;
-    padding-top: 6px; }
-  footer .footer__mapa {
-    grid-area: mapa;
-    justify-self: center; }
-  footer .footer__redes_container {
-    grid-area: redes;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; }
-  footer .footer__redes {
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .footer__redes {
     padding: 1px; }
-  footer .footer__derechos {
-    grid-area: derechos;
+  .footer__derechos {
     display: flex;
     justify-content: flex-start;
     text-decoration: underline;
     color: #0b1405; }
-  footer .footer__iconos {
+  .footer__iconos {
     width: 70px;
     height: 70px;
     margin: 12px; }
@@ -209,6 +193,14 @@ footer {
     font-size: 16px; } }
 
 @media only screen and (max-width: 479px) {
+  .principal {
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 80% 40% 80%;
+    padding: 20px 0 20px 0; }
+  .end__contenedor {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "parrafo" "budin" "macarons" "number"; }
   .contacto__input {
     display: flex;
     justify-content: space-between;
@@ -222,14 +214,6 @@ footer {
   .end__videos {
     width: 100vw;
     height: 50vh; }
-  .principal {
-    grid-template-columns: 20% 60% 20%;
-    grid-template-rows: 80% 40% 80%;
-    padding: 20px 0 20px 0; }
-  .end__contenedor {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "parrafo" "budin" "macarons" "number"; }
   .resenas__container {
     font-size: 17px; }
   .nosotros__container {
