@@ -12,12 +12,13 @@
 *{
     margin: 0px; /* MARGEN EXTERNO */
     padding: 0px; /* MARGEN INTERNO */
+    box-sizing: border-box;
 }
 
 .body__default {
     font-family: 'Bebas Neue', cursive;
-    color:#ea93bf;
-    background-color: #fff7f4;
+    color:#9f82b2;
+    background-color:#fff7f4;
 }
 
 .header__default {
@@ -28,18 +29,8 @@ main {
     background-color:#fff7f4;
 }
 
-.mainbutton {
-    width: 80vw;
-    height: 10vh;
-    font-size: 30px;
-}
 
-button:hover {
-    background-image: linear-gradient(100deg, #9f82b1, #bcb4c4);
-    /* transform: translate(10px, 10px); este es para mover el elemento*/
-    transform: scale(1.05,1.05);
-    transition: all 1s;
-} 
+
 
 
 .botones {
@@ -49,6 +40,13 @@ button:hover {
     color:#fff7f4; 
 }
 
+.botones:hover {
+    background-image: linear-gradient(100deg, #9f82b1, #bcb4c4);
+    transform: scale(1.05,1.05);
+    transition: all 1s; /* transform: translate(10px, 10px); este es para mover el elemento*/
+}
+
+
 label {
     font-size: 110%;
 }
@@ -57,13 +55,7 @@ label {
 
 
 /* CLASS ENLACES NAV */
-a {
-    text-decoration: none; 
-    color:rgb(243, 120, 120);
-    font-size: 22px;
-}
 
-h4 {
-    font-size: 20px;
-}
+
+
 

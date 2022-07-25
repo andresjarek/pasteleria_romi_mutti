@@ -1,39 +1,26 @@
 footer {
     display: grid;
-    grid-template-columns:1fr 2fr 1fr;
-    grid-template-areas: "navegacion mapa mapa redes"
-                        "navegacion mapa mapa derechos";
+    grid-template-columns:auto;
+    grid-template-areas: "redes"
+                        "derechos";
     background-color: rgb(250, 249, 245);
     padding: 6px;
     
     .footer {
-        &__navegacion ul li {
-            list-style: none;
-            font-size: 16px;
-            padding-top: 6px;
-        }
 
-        &__mapa {
-            grid-area: mapa;
-            justify-self: center;
-        }
-
-        &__redes_container {
+        &__redes {
             grid-area: redes;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
-        }
-
-        &__redes {
             padding: 1px;
         }
+
 
         &__derechos {
             grid-area: derechos;
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             text-decoration: underline;
             color:rgb(11, 20, 5)
 

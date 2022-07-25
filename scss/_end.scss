@@ -5,38 +5,40 @@
 
 .end__contenedor {
 display: grid;
-grid-template-columns: 33% 34% 33%;
-grid-template-rows: 0,3fr, 1fr;
-grid-template-areas:    "parrafo parrafo parrafo"
-                        "budin macarons number";
+object-fit: cover;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: auto;
+grid-template-areas:     "torta macarons copitas"
+                        "parrafo parrafo parrafo";
+gap: 2px;
+padding-top: 2px;
 }  
-.parrafo__gridarea {
-    grid-area: parrafo;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(249, 249, 197);
-    width: 98vw;
-    background-size: cover;
-    background-position: center;
-}   
-.parrafo__estilos {
-    text-align: center;
-    align-items: center;
-} 
 
-.budin__gridarea {
-    grid-area: budin;
+
+.torta__gridarea {
+    grid-area: torta;
 }
 .macarons__gridarea {
     grid-area: macarons;
 }
-.number__gridarea {
-    grid-area: number;
+.copitas__gridarea {
+    grid-area: copitas;
 }
-.end__videos {
+
+.end__imagenes {
+    object-fit: cover;
     width: 100%;
     height: 50vh;
+    }
+
+.parrafo__gridarea {
+    grid-area: parrafo;
+    display: flex;
+    background-color: #fff7f4;
+    width: 100%;
+    object-fit: cover;
+    padding: 5px;
+    text-align: center;
+    align-items: center;
+    
 }
-
-
