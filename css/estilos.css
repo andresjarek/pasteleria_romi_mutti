@@ -1,31 +1,25 @@
 .nav-link:hover {
   background-color: #ea93bf; }
 
+.navbar-expand-lg .navbar-collapse {
+  justify-content: end; }
+
 footer {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-areas: "navegacion mapa mapa redes" "navegacion mapa mapa derechos";
+  grid-template-columns: auto;
+  grid-template-areas: "redes" "derechos";
   background-color: #faf9f5;
   padding: 6px; }
-  footer .footer__navegacion ul li {
-    list-style: none;
-    font-size: 16px;
-    padding-top: 6px; }
-  footer .footer__mapa {
-    grid-area: mapa;
-    justify-self: center; }
-  footer .footer__redes_container {
+  footer .footer__redes {
     grid-area: redes;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; }
-  footer .footer__redes {
     padding: 1px; }
   footer .footer__derechos {
     grid-area: derechos;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     text-decoration: underline;
     color: #0b1405; }
   footer .footer__iconos {
@@ -37,11 +31,14 @@ footer {
   display: grid;
   background-image: linear-gradient(rgba(90, 85, 85, 0.7), rgba(66, 54, 30, 0.905)), url("../recursos/background.jpg");
   min-height: 70vh;
-  width: 98vw;
+  width: 100%;
   background-size: cover;
+  object-fit: cover;
   background-position: center;
-  grid-template-columns: 33% 34% 33%;
-  grid-template-rows: 35% 65%; }
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 35% 65%;
+  align-items: center;
+  justify-items: center; }
   .principal__titulo {
     grid-column: 2/3;
     grid-row: 1/2;
@@ -50,7 +47,14 @@ footer {
     align-items: center; }
   .principal__boton {
     grid-column: 2/3;
-    grid-row: 2/3; }
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .principal .mainbutton {
+    width: 40vw;
+    height: 10vh;
+    font-size: 30px; }
 
 /* GRID 2DA SECTION INDEX */
 .end {
@@ -58,36 +62,36 @@ footer {
 
 .end__contenedor {
   display: grid;
-  grid-template-columns: 33% 34% 33%;
-  grid-template-rows: 0,3fr, 1fr;
-  grid-template-areas: "parrafo parrafo parrafo" "budin macarons number"; }
+  object-fit: cover;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "torta macarons copitas" "parrafo parrafo parrafo";
+  gap: 2px;
+  padding-top: 2px; }
 
-.parrafo__gridarea {
-  grid-area: parrafo;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f9f9c5;
-  width: 98vw;
-  background-size: cover;
-  background-position: center; }
-
-.parrafo__estilos {
-  text-align: center;
-  align-items: center; }
-
-.budin__gridarea {
-  grid-area: budin; }
+.torta__gridarea {
+  grid-area: torta; }
 
 .macarons__gridarea {
   grid-area: macarons; }
 
-.number__gridarea {
-  grid-area: number; }
+.copitas__gridarea {
+  grid-area: copitas; }
 
-.end__videos {
+.end__imagenes {
+  object-fit: cover;
   width: 100%;
   height: 50vh; }
+
+.parrafo__gridarea {
+  grid-area: parrafo;
+  display: flex;
+  background-color: #fff7f4;
+  width: 100%;
+  object-fit: cover;
+  padding: 5px;
+  text-align: center;
+  align-items: center; }
 
 .productos__parrafo {
   display: flex;
@@ -161,20 +165,29 @@ footer {
     display: flex;
     font-size: 25px; }
   .end {
-    grid-template-areas: "parrafo parrafo parrafo" "budin macarons number"; }
+    grid-template-areas: "torta macarons copitas" "parrafo parrafo parrafo"; }
   end__parrafo {
     text-align: center;
     width: 100%; }
-  end__videos {
+  end__imagenes {
     width: 100%;
-    height: 50vh; }
-  a {
-    font-size: 20px; } }
+    height: 50vh; } }
 
 @media only screen and (max-width: 899px) {
   .principal {
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: auto; }
+  .end__contenedor {
+    display: grid;
+    object-fit: cover;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "torta parrafo" "macarons copitas";
+    gap: 2px;
+    padding-top: 2px; }
+  .parrafo__gridarea {
+    text-align: center;
+    align-items: center; }
   .contacto__input {
     display: flex;
     justify-content: space-between;
@@ -186,29 +199,36 @@ footer {
   .contacto__datos {
     justify-content: center;
     display: flex; }
-  .end__contenedor {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "parrafo" "budin" "macarons" "number"; }
-  .end__videos {
-    width: 100vw;
-    height: 50vh; }
   footer {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "navegacion mapa"  "redes redes"  "derechos derechos"; }
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: "redes"  "derechos"; }
   .footer__derechos {
-    display: flexbox;
+    display: flex;
     grid-area: derechos;
     justify-content: center; }
   .footer__iconos {
     width: 40px;
-    height: 40px; }
-  a {
-    font-size: 16px; } }
+    height: 40px; } }
 
 @media only screen and (max-width: 479px) {
+  .principal {
+    display: grid;
+    background-image: linear-gradient(rgba(90, 85, 85, 0.7), rgba(66, 54, 30, 0.905)), url("../recursos/background.jpg");
+    min-height: 70vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    grid-template-columns: 10% 80% 10%; }
+    .principal .mainbutton {
+      width: 50vw;
+      height: 8vh;
+      font-size: 20px; }
+  .end__contenedor {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "torta" "macarons" "copitas"  "parrafo"; }
   .contacto__input {
     display: flex;
     justify-content: space-between;
@@ -219,17 +239,9 @@ footer {
   .contacto__datos {
     justify-content: center;
     display: flex; }
-  .end__videos {
+  .end__imagenes {
     width: 100vw;
     height: 50vh; }
-  .principal {
-    grid-template-columns: 20% 60% 20%;
-    grid-template-rows: 80% 40% 80%;
-    padding: 20px 0 20px 0; }
-  .end__contenedor {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "parrafo" "budin" "macarons" "number"; }
   .resenas__container {
     font-size: 17px; }
   .nosotros__container {
@@ -249,19 +261,18 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "navegacion" "mapa" "redes" "derechos"; }
-  a {
-    font-size: 16px; } }
+    grid-template-areas: "redes" "derechos"; } }
 
 * {
   margin: 0px;
   /* MARGEN EXTERNO */
   padding: 0px;
-  /* MARGEN INTERNO */ }
+  /* MARGEN INTERNO */
+  box-sizing: border-box; }
 
 .body__default {
   font-family: 'Bebas Neue', cursive;
-  color: #ea93bf;
+  color: #9f82b2;
   background-color: #fff7f4; }
 
 .header__default {
@@ -270,32 +281,20 @@ footer {
 main {
   background-color: #fff7f4; }
 
-.mainbutton {
-  width: 80vw;
-  height: 10vh;
-  font-size: 30px; }
-
-button:hover {
-  background-image: linear-gradient(100deg, #9f82b1, #bcb4c4);
-  /* transform: translate(10px, 10px); este es para mover el elemento*/
-  transform: scale(1.05, 1.05);
-  transition: all 1s; }
-
 .botones {
   background-color: #9f81b2;
   border: #9f81b2 solid 3px;
   border-radius: 10px;
   color: #fff7f4; }
 
+.botones:hover {
+  background-image: linear-gradient(100deg, #9f82b1, #bcb4c4);
+  transform: scale(1.05, 1.05);
+  transition: all 1s;
+  /* transform: translate(10px, 10px); este es para mover el elemento*/ }
+
 label {
   font-size: 110%; }
 
 /* TITULOS DE PAGINAS */
 /* CLASS ENLACES NAV */
-a {
-  text-decoration: none;
-  color: #f37878;
-  font-size: 22px; }
-
-h4 {
-  font-size: 20px; }
