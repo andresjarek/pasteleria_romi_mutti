@@ -97,9 +97,18 @@ footer {
   display: flex;
   justify-content: center;
   text-align: center;
-  margin: 25px 0 25px 0;
-  padding: 3px;
   background-color: #f9f9c5; }
+
+.card-img-top {
+  object-fit: contain; }
+
+.card-img-top:hover {
+  transform: scale(1.4, 1.4);
+  transition: all 1.13s;
+  /* transform: translate(10px, 10px); este es para mover el elemento*/ }
+
+.card-text {
+  color: #e994be; }
 
 .contacto__container {
   margin: 10px;
@@ -281,20 +290,15 @@ footer {
 main {
   background-color: #fff7f4; }
 
+/* --ESTILOS DE BOTON-- */
 .botones {
   background-color: #9f81b2;
-  border: #9f81b2 solid 3px;
+  border: #9f81b2 solid 2px;
   border-radius: 10px;
   color: #fff7f4; }
 
+/* transform: translate(10px, 10px); este es para mover el elemento*/
 .botones:hover {
-  background-image: linear-gradient(100deg, #9f82b1, #bcb4c4);
+  background-image: linear-gradient(100deg, #9f82b1, #7a6f86);
   transform: scale(1.05, 1.05);
-  transition: all 1s;
-  /* transform: translate(10px, 10px); este es para mover el elemento*/ }
-
-label {
-  font-size: 110%; }
-
-/* TITULOS DE PAGINAS */
-/* CLASS ENLACES NAV */
+  transition: all 1s; }

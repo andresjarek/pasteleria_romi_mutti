@@ -2,7 +2,19 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    margin: 25px 0 25px 0;
-    padding: 3px;
     background-color: rgb(249, 249, 197);
     }
+
+.card-img-top {
+    object-fit: contain;
+;
+}
+
+.card-img-top:hover {
+    transform: scale(1.4,1.4);
+    transition: all 1.13s; /* transform: translate(10px, 10px); este es para mover el elemento*/
+    }
+
+.card-text {
+    color: #e994be;
+}
