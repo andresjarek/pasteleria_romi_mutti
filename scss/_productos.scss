@@ -6,15 +6,17 @@
     }
 
 .card-img-top {
-    object-fit: contain;
-;
-}
-
-.card-img-top:hover {
-    transform: scale(1.4,1.4);
-    transition: all 1.13s; /* transform: translate(10px, 10px); este es para mover el elemento*/
+    object-fit:cover ;
+    width: 310px;
+    height: 320px;
     }
 
+.card:hover {
+        transform: scale(1.05, 1.05);
+        transition: all 0.23s;
+    }
+    
 .card-text {
     color: #e994be;
-}
+    }
+
