@@ -4,7 +4,6 @@
     justify-content: center;
     height: 100%;
     
- 
 
     &__input {
         display: flex;
@@ -25,16 +24,18 @@
     }
 
     &__datos {
-        justify-content: flex-start ;
-
+        justify-content: flex-start;
     }
+
     &__areas {
         display: flex;
         justify-self: end; 
         width: 100%;
         
     }
+
 }
+
 .atencion {
     padding: 5px;
     margin-bottom: 3px;
