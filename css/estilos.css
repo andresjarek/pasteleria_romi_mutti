@@ -108,41 +108,23 @@ footer {
   transform: scale(1.05, 1.05);
   transition: all 0.23s; }
 
-.card-title {
-  size: 30px; }
-
 .card-text {
   color: #e994be; }
 
-.contacto__container {
-  margin: 10px;
-  display: flex;
-  justify-content: center;
-  height: 100%; }
-  .contacto__container__input {
-    display: flex;
-    justify-content: space-between;
-    background-color: #d9f8c4;
-    padding: 10px; }
-    .contacto__container__input__default:focus {
-      color: #f37878; }
-  .contacto__container__buttons {
-    display: flex;
-    padding: 5px 25% 5px 25%;
-    flex-direction: row;
-    justify-content: space-around; }
-  .contacto__container__datos {
-    justify-content: flex-start; }
-  .contacto__container__areas {
-    display: flex;
-    justify-self: end;
-    width: 100%; }
+.contacto__contenedor {
+  margin-top: 7px; }
 
-.atencion {
-  padding: 5px;
-  margin-bottom: 3px;
-  background-color: #d9f8c4;
-  text-align: center; }
+.contacto__buttons {
+  display: flex;
+  padding: 5px 25% 5px 25%;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.cont__boton {
+  width: 15vw;
+  height: 7vh;
+  font-size: 16px;
+  margin: 2px; }
 
 .resenas__container {
   display: grid;
@@ -150,8 +132,8 @@ footer {
   grid-template-rows: auto;
   grid-template-areas: "resenas1"  "resenas2"  "resenas3"  "resenas4"  "resenas5"  "resenas6"  "resenas7";
   row-gap: 16px;
-  font-family: 'Dancing Script', cursive;
-  font-size: 25px;
+  font-family: 'Italianno', cursive;
+  font-size: 30px;
   width: 100%;
   padding: 10px; }
 
@@ -169,7 +151,9 @@ footer {
   .nosotros__parrafo {
     grid-area: nosotros__parrafo;
     width: 100%;
-    text-align: center; }
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Roboto Condensed', sans-serif; }
 
 @media only screen and (min-width: 900px) {
   .principal {
@@ -293,6 +277,15 @@ footer {
 
 main {
   background-color: #fff7f4; }
+
+.titulos__etiquetas {
+  display: flex;
+  background-image: linear-gradient(rgba(148, 110, 110, 0.7), rgba(146, 137, 118, 0.905)), url("../recursos/background.jpg");
+  min-height: 17px;
+  width: 100%;
+  background-size: cover;
+  object-fit: cover;
+  justify-content: center; }
 
 /* --ESTILOS DE BOTON-- */
 .botones {
