@@ -93,12 +93,6 @@ footer {
   text-align: center;
   align-items: center; }
 
-.productos__parrafo {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  background-color: #f9f9c5; }
-
 .card-img-top {
   object-fit: cover;
   width: 310px;
