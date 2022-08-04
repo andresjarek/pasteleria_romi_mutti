@@ -32,14 +32,8 @@ main {
 }
 
 .titulos__etiquetas {
-    display: flex;
-    background-image: linear-gradient($grad1_bck, $grad1_bck),
-    url("../recursos/background.jpg");
-    min-height: 17px;
-    width: 100%;
-    background-size:cover;
-    object-fit: cover;
-    justify-content: center;
+
+    text-align: center;
     
 }
 
@@ -52,7 +46,7 @@ main {
     color:$blanco; 
     
 }
- /* transform: translate(10px, 10px); este es para mover el elemento*/
+
 .botones:hover {
     background-image: linear-gradient(100deg, $grad1_bot, $grad2_bot);
     transform: scale(1.05,1.05);

@@ -119,20 +119,60 @@ footer {
   width: 25rem;
   height: 2.5rem; }
 
-.contacto__contenedor {
-  margin-top: 7px; }
+.contacto {
+  display: flex;
+  /*     flex-direction: row; */
+  align-items: center;
+  padding: 1rem;
+  justify-content: space-evenly; }
+  .contacto__form {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around; }
+
+.contacto__label {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+
+.contacto__celdas {
+  padding: 5px; }
+
+.contacto label {
+  display: flex;
+  justify-content: flex-start; }
 
 .contacto__buttons {
   display: flex;
   padding: 5px 25% 5px 25%;
   flex-direction: row;
-  justify-content: space-around; }
+  justify-content: center; }
 
-.cont__boton {
-  width: 15vw;
-  height: 6vh;
+.contacto__boton {
+  width: 8vw;
+  height: 5vh;
   font-size: 1rem;
   margin: 2px; }
+
+.contacto__textarea {
+  padding: 5px; }
+
+.contacto__input {
+  width: 21vw; }
+
+.contacto__ubicacion {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+
+.contacto__ubicacion iframe {
+  padding-bottom: 3vh; }
+
+.contacto__ubicacion h6 {
+  text-align: center; }
+
+.svg__locacion {
+  width: 10vw; }
 
 .resenas__container {
   display: grid;
@@ -326,13 +366,7 @@ main {
   background-color: #fff7f4; }
 
 .titulos__etiquetas {
-  display: flex;
-  background-image: linear-gradient(rgba(90, 85, 85, 0.7), rgba(90, 85, 85, 0.7)), url("../recursos/background.jpg");
-  min-height: 17px;
-  width: 100%;
-  background-size: cover;
-  object-fit: cover;
-  justify-content: center; }
+  text-align: center; }
 
 /* --ESTILOS DE BOTON-- */
 .botones {
@@ -341,7 +375,6 @@ main {
   border-radius: 10px;
   color: #fff7f4; }
 
-/* transform: translate(10px, 10px); este es para mover el elemento*/
 .botones:hover {
   background-image: linear-gradient(100deg, #9f82b1, #7a6f86);
   transform: scale(1.05, 1.05);

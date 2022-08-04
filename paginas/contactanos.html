@@ -44,36 +44,46 @@
     <main>
         <div class="titulos__etiquetas">
             <h1> Contáctanos </h1>
-        </div class="contacto__contenedor">    
-            <section class="container">
-                <div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Cristina Fernández">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Teléfono Celular</label>
-                        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="011 5555 5555">
-                    </div><div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="cristina_f@gmail.com">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Comentarios o sugerencias</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                    <div class="contacto__buttons">
-                        <button class="botones cont__boton"  title="Enviar">Enviar</button>
-                        <button class="botones cont__boton" title="Borrar">Borrar</button>
-                        <button class="botones cont__boton" title="Button">Button</button>
-                    </div>
-                </div>
-                <div>
-                    
+        </div>
+            <div class="contacto">
+                
+                <form method="post" class="contacto__form">
+                    <div class="contacto__label">
+                        <div >
+                            <div class="contacto__celdas">
+                                <label>Nombre:</label>
+                                <input type="text" class="contacto__input">
+                            </div>
+                            <div class="contacto__celdas">
+                                <label>Teléfono: </label>
+                                <input type="number" class="contacto__input">
+                            </div>
+                            <div class="contacto__celdas">
+                                <label>Email:</label>
+                                <input type="email" class="contacto__input">
+                            </div>
+                        </div>
+                        <div class="contacto__textarea">
+                            <textarea name="Dejanos tu consulta o comentario" id="" cols="40" rows="3"></textarea>
+                        </div>
+                        <div class="contacto__buttons">
+                            <button class=" botones contacto__boton"  title="Enviar">Enviar</button>
+                            <button class=" botones contacto__boton" title="Borrar">Borrar</button>
+                            <button class=" botones contacto__boton" title="Button">Button</button>
+                        </div>
+                    </div>    
+                </form>
+                <div class="contacto__ubicacion">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d690.6624860982381!2d-58.58531538498183!3d-34.56968123170706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb90e0969b667%3A0x4bf58a6e15dd7437!2sTorre%2021!5e0!3m2!1ses-419!2sar!4v1659045634042!5m2!1ses-419!2sar" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <h5>Nos encontramos ubicados en Barrio Parque Gral San Martin o en romipasteleria@gmail.com, por telefono o al whatsapp al (011) 7362-3478 </h5>
+                    <img class="svg__locacion" src="../recursos/location.svg" alt="locacion">
+                    <h6>Lafayette N° 6030 - Billinghurst - San Martin</h6>
+
+                    
                 </div>
-            </section>
+                
+            </div>
+        
+             
     </main>
 
     <footer>

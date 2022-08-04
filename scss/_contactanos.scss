@@ -1,21 +1,74 @@
+.contacto {
+    display: flex;
+/*     flex-direction: row; */
+    align-items: center;
+    padding: 1rem;
+    justify-content: space-evenly;
 
-.contacto__contenedor{
-    margin-top: 7px;
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+    
+    }
+
+}
+
+.contacto__label {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contacto__celdas {
+    padding: 5px;
+    
+    
+}
+.contacto label {
+    display: flex;
+    justify-content: flex-start;
 }
 
 
-    
 .contacto__buttons {
     display: flex;
     padding: 5px 25% 5px 25%;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
 }
-.cont__boton {
-    width: 15vw;
-    height: 6vh;
+
+.contacto__boton {
+    width: 8vw;
+    height: 5vh;
     font-size: 1rem;
     margin: 2px;
 }
 
+.contacto__textarea {
+    padding: 5px;
 
+}
+
+.contacto__input {
+    width: 21vw;
+}
+
+.contacto__ubicacion {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.contacto__ubicacion iframe {
+    padding-bottom: 3vh;
+}
+
+.contacto__ubicacion h6 {
+    text-align: center;
+    
+}
+.svg__locacion {
+    width: 10vw;
+}
