@@ -12,6 +12,22 @@
 
     
 .card-text {
-    color: #e994be;
+    color: $rosa;
     }
 
+.card-body {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-around;
+}
+
+
+.bot_productos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    height: 2.5rem;
+
+}

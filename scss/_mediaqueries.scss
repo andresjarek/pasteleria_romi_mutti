@@ -34,9 +34,13 @@
         grid-template-rows: auto;
         }
 
+    .contacto {
+        flex-direction: row;
+        }
 
 
-.end__contenedor {
+
+    .end__contenedor {
     display: grid;
     object-fit: cover;
     grid-template-columns: 1fr 1fr;
@@ -51,29 +55,20 @@
         text-align: center;
         align-items: center;
     }
-    .contacto__input {
-        display: flex;
-        justify-content: space-between;
-        background-color: rgb(217, 248, 196);
-        padding: 10px;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: center;
-        }
 
-    .contacto__datos {
-        justify-content: center;
-        display: flex;
-        }
+    .resenas__container {
+        grid-template-columns: 1fr;
+        grid-template-areas:    "resenas1" 
+                                "resenas2"
+                                "resenas3" 
+                                "resenas4" 
+                                "resenas5"
+                                "resenas6"
+                                "resenas7" 
+                                "resenas8";                           
+    }
+    
 
-    footer {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-template-areas:    "redes" 
-                                "derechos"
-        
-        }
 
     .footer__derechos {
         display: flex;
@@ -91,14 +86,7 @@
 @media only screen and (max-width:479px) {
     
     .principal {
-        display: grid;
-        background-image: linear-gradient(rgba(90, 85, 85, 0.7), rgba(66, 54, 30, 0.905)),
-        url("../recursos/background.jpg");
-        min-height: 70vh;
-        width: 100%;
-        background-size:cover;
-        background-position: center;
-        grid-template-columns: 10% 80% 10%;
+
 
         .mainbutton {
             width: 50vw;
@@ -120,27 +108,39 @@
                                 "parrafo";
         }
 
-    .contacto__input {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: center;
-        }
-    .contacto__datos {
-        justify-content: center;
-        display: flex;
-        }
+
     .end__imagenes {
         width: 100vw;
         height: 50vh;
         }
 
+    .contacto {
+    flex-direction: row;
+    }
+
+    .contacto__boton {
+        width: 16vw;
+        height: 4vh;
+        margin: 2px;
+    }
+
+    .contacto__input {
+        width: 100%;
+    }
+    
 
     .resenas__container {
-        font-size: 17px;
-        }
+    grid-template-columns: 1fr;
+    grid-template-areas:    "resenas1" 
+                            "resenas2"
+                            "resenas3" 
+                            "resenas4" 
+                            "resenas5"
+                            "resenas6"
+                            "resenas7" 
+                            "resenas8";                           
+    }
+
 
     .nosotros__container {
         display: grid;
@@ -162,14 +162,6 @@
         text-align: center;
         }
 
-    footer {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:    "redes"
-                            "derechos"
-                            
-        }
 
-
+        
 }

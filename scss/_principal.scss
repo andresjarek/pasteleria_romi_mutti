@@ -1,6 +1,6 @@
 .principal {
     display: grid;
-    background-image: linear-gradient(rgba(90, 85, 85, 0.7), rgba(66, 54, 30, 0.905)),
+    background-image: linear-gradient( $grad1_bck, $grad2_bck),
     url("../recursos/background.jpg");
     min-height: 70vh;
     width: 100%;
