@@ -124,7 +124,8 @@ footer {
   /*     flex-direction: row; */
   align-items: center;
   padding: 1rem;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  flex-wrap: wrap; }
   .contacto__form {
     display: flex;
     flex-direction: column;
@@ -138,7 +139,7 @@ footer {
 .contacto__celdas {
   padding: 5px; }
 
-.contacto label {
+.contacto__label {
   display: flex;
   justify-content: flex-start; }
 
@@ -286,6 +287,8 @@ footer {
   .principal {
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: auto; }
+  .contacto {
+    flex-direction: row; }
   .end__contenedor {
     display: grid;
     object-fit: cover;
@@ -300,11 +303,6 @@ footer {
   .resenas__container {
     grid-template-columns: 1fr;
     grid-template-areas: "resenas1"  "resenas2" "resenas3"  "resenas4"  "resenas5" "resenas6" "resenas7"  "resenas8"; }
-  .footer {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas: "redes"  "derechos"; }
   .footer__derechos {
     display: flex;
     grid-area: derechos;
@@ -325,6 +323,14 @@ footer {
   .end__imagenes {
     width: 100vw;
     height: 50vh; }
+  .contacto {
+    flex-direction: row; }
+  .contacto__boton {
+    width: 16vw;
+    height: 4vh;
+    margin: 2px; }
+  .contacto__input {
+    width: 100%; }
   .resenas__container {
     grid-template-columns: 1fr;
     grid-template-areas: "resenas1"  "resenas2" "resenas3"  "resenas4"  "resenas5" "resenas6" "resenas7"  "resenas8"; }
@@ -340,12 +346,7 @@ footer {
   .nosotros__parrafo {
     grid-area: nosotros__parrafo;
     width: 100%;
-    text-align: center; }
-  footer {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "redes" "derechos"; } }
+    text-align: center; } }
 
 * {
   margin: 0px;

@@ -4,6 +4,7 @@
     align-items: center;
     padding: 1rem;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 
     &__form {
         display: flex;
@@ -25,7 +26,7 @@
     
     
 }
-.contacto label {
+.contacto__label {
     display: flex;
     justify-content: flex-start;
 }
@@ -52,6 +53,7 @@
 
 .contacto__input {
     width: 21vw;
+    
 }
 
 .contacto__ubicacion {
