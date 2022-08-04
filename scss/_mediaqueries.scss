@@ -41,20 +41,10 @@
 
 
     .end__contenedor {
-    display: grid;
-    object-fit: cover;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
     grid-template-areas:     "torta parrafo"
                             "macarons copitas";
-    gap: 2px;
-    padding-top: 2px;
     }  
-    
-    .parrafo__gridarea {
-        text-align: center;
-        align-items: center;
-    }
 
     .resenas__container {
         grid-template-columns: 1fr;
@@ -88,7 +78,7 @@
     .principal {
 
 
-        .mainbutton {
+        &__mainbutton {
             width: 50vw;
             height: 8vh;
             font-size: 20px;
@@ -106,28 +96,24 @@
                                 "macarons"
                                 "copitas" 
                                 "parrafo";
-        }
-
-
-    .end__imagenes {
-        width: 100vw;
-        height: 50vh;
-        }
+        
+    }
+   
 
     .contacto {
     flex-direction: row;
-    }
-
-    .contacto__boton {
-        width: 16vw;
-        height: 4vh;
-        margin: 2px;
-    }
-
-    .contacto__input {
-        width: 100%;
-    }
     
+
+        &__boton {
+            width: 16vw;
+            height: 4vh;
+            margin: 2px;
+        }
+
+        &__input {
+            width: 100%;
+        }
+    }
 
     .resenas__container {
     grid-template-columns: 1fr;
@@ -149,19 +135,19 @@
         grid-template-areas:    "nosotros__imagen"
                                 "nosotros__parrafo";
         column-gap: 5px;
-        }
+        
+        &__imagen {
+                grid-area: nosotros__imagen;
+                width: 100%;
+                }
 
-    .nosotros__imagen {
-        grid-area: nosotros__imagen;
-        width: 100%;
-        }
-
-    .nosotros__parrafo {
-        grid-area: nosotros__parrafo;
-        width: 100%;
-        text-align: center;
-        }
-
+        &__parrafo {
+            grid-area: nosotros__parrafo;
+            width: 100%;
+            text-align: center;
+            }
+    
+    }
 
         
 }

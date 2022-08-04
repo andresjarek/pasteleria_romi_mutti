@@ -1,44 +1,46 @@
 /* GRID 2DA SECTION INDEX */
 .end {
     margin: 0px;
-}
-
-.end__contenedor {
-display: grid;
-object-fit: cover;
-grid-template-columns: 1fr 1fr 1fr;
-grid-template-rows: auto;
-grid-template-areas:     "torta macarons copitas"
-                        "parrafo parrafo parrafo";
-gap: 2px;
-padding-top: 2px;
-}  
-
-
-.torta__gridarea {
-    grid-area: torta;
-}
-.macarons__gridarea {
-    grid-area: macarons;
-}
-.copitas__gridarea {
-    grid-area: copitas;
-}
-
-.end__imagenes {
-    object-fit: cover;
-    width: 100%;
-    height: 50vh;
-    }
-
-.parrafo__gridarea {
-    grid-area: parrafo;
-    display: flex;
-    background-color: $blanco;
-    width: 100%;
-    object-fit: cover;
-    padding: 5px;
-    text-align: center;
-    align-items: center;
     
+    &__contenedor {
+        display: grid;
+        object-fit: cover;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:     "torta macarons copitas"
+                                "parrafo parrafo parrafo";
+        gap: 2px;
+        padding-top: 2px;
+    }  
+    
+        &__torta__gridarea {
+            grid-area: torta;
+        }
+        &__macarons__gridarea {
+            grid-area: macarons;
+        }
+        &__copitas__gridarea {
+            grid-area: copitas;
+        }
+
+        &__parrafo__gridarea {
+            grid-area: parrafo;
+            display: flex;
+            background-color: $blanco;
+            width: 100%;
+            object-fit: cover;
+            padding: 5px;
+            text-align: center;
+            align-items: center;
+            
+        } 
+        &__imagenes {
+            object-fit: cover;
+            width: 100%;
+            height: 50vh;
+            }
 }
+
+
+
+
