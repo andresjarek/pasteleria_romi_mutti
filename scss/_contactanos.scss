@@ -10,72 +10,73 @@
         display: flex;
         flex-direction: column;
         align-content: space-around;
+        }
     
-    }
+        &__label {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }   
+        &__celdas {
+            padding: 5px;
+            
+            
+        }
+        &__label {
+            display: flex;
+            justify-content: flex-start;
+        }
+        
+        
+        &__buttons {
+            display: flex;
+            padding: 5px 25% 5px 25%;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        &__boton {
+            width: 8vw;
+            height: 5vh;
+            font-size: 1rem;
+            margin: 2px;
+        }
+        
+        &__textarea {
+            padding: 5px;
+        
+        }
+        
+        &__input {
+            width: 21vw;
+            
+        }
+        
+        &__ubicacion {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            
+        }
+        
+        &__ubicacion iframe {
+            padding-bottom: 3vh;
+        }
+        
+        &__ubicacion h6 {
+            text-align: center;
+            
+        }
+        
+        &__svg__locacion {
+            width: 1rem;
+        
+        }
 
+        &__ubicacion__row {
+            display: flex;
+            align-items: baseline;
+        }
 }
 
-.contacto__label {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.contacto__celdas {
-    padding: 5px;
-    
-    
-}
-.contacto__label {
-    display: flex;
-    justify-content: flex-start;
-}
-
-
-.contacto__buttons {
-    display: flex;
-    padding: 5px 25% 5px 25%;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.contacto__boton {
-    width: 8vw;
-    height: 5vh;
-    font-size: 1rem;
-    margin: 2px;
-}
-
-.contacto__textarea {
-    padding: 5px;
-
-}
-
-.contacto__input {
-    width: 21vw;
-    
-}
-
-.contacto__ubicacion {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    
-}
-
-.contacto__ubicacion iframe {
-    padding-bottom: 3vh;
-}
-
-.contacto__ubicacion h6 {
-    text-align: center;
-    
-}
-.svg__locacion {
-    width: 1rem;
-
-}
-.contacto__ubicacion__row {
-    display: flex;
-    align-items: baseline;
-}
+        

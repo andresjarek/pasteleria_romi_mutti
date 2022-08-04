@@ -18,7 +18,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-    }
+        text-align: center;
+        }
+        &__titulo__estilos {
+            font-size: 4rem;
+        }
+    
 
 
     &__boton {
@@ -27,15 +32,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        }
 
-    }
-
-    .mainbutton {
+    &__mainbutton {
         width: 40vw;
         height: 10vh;
-        font-size: 30px;
-    }
+        font-size: 2rem;
+        }
     
+   
 }
 
 
