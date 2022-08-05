@@ -1,4 +1,5 @@
 @import "variables";
+@import "operators";
 @import "header";
 @import "nav";
 @import "footer";
@@ -18,7 +19,7 @@
 }
 
 .body__default {
-    font-family: 'Bebas Neue', cursive;
+    font-family: $font-principal;
     color:$violeta;
     background-color:$blanco;
 }

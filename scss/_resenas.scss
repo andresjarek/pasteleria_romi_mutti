@@ -4,81 +4,54 @@
     grid-template-rows: auto;
     grid-template-areas:    "resenas1 resenas2"
                             "resenas3 resenas4" 
-                            "resenas5 resenas4"
                             "resenas5 resenas6"
-                            "resenas7 resenas6"
                             "resenas7 resenas8";                           
-    row-gap: 5px;
-    column-gap: 5px;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 2rem;
+    row-gap: 25px;
+    column-gap: 25px;
+    font-family: $font-secundaria;
+    font-size: 1rem;
     color: $rosa;
     width: 100%;
     padding: 10px;
     font-style: italic;
-    text-align: end;
+    
 
     &__comments {
         background-color: $blanco;
     }
-    
+
     &__resenas1 {
         grid-area: resenas1;
-        background-image: url("../recursos/resenas1.jpg");
-        min-height: 80vh;
-        object-fit: cover;
-        background-size: cover;
+
     }
     &__resenas2 {
         grid-area: resenas2;
-        background-image: url("../recursos/resenas2.jpg");
-        min-height: 100vh;
-        object-fit: cover;
-        background-size: cover;
+
     }
     &__resenas3 {
         grid-area: resenas3;
-        background-image: url("../recursos/resenas3.jpg");
-        min-height: 100vh;
-        object-fit: cover;
-        background-size: cover;
+
     }
     &__resenas4 {
         grid-area: resenas4;
-        background-image: url("../recursos/resenas4.jpg");
-        min-height: 100vh;
-        object-fit: cover;
-        background-size: cover;
+
     }
     &__resenas5 {
         grid-area: resenas5;
-        background-image: url("../recursos/resenas5.jpg");
-        min-height: 100vh;
-        object-fit: cover;
-        background-size: cover;
+
     }
     &__resenas6 {
         grid-area: resenas6;
-        background-image: url("../recursos/resenas6.jpg");
-        min-height: 100vh;
-        object-fit: cover;
-        background-size: cover;
-        background-position: center;
+
     }
     &__resenas7 {
         grid-area: resenas7;
-        background-image: url("../recursos/resenas7.jpg");
-        min-height: 100vh;
-        object-fit: cover;
-        background-size: cover;
+
         
     }
     &__resenas8 {
         grid-area: resenas8;
-        background-image: url("../recursos/resenas8.jpg");
-        min-height: 100vh;
-        object-fit: cover;
-        background-size: cover;
+
     }
     
 }
