@@ -2,13 +2,13 @@
     display: grid;
     background-image: linear-gradient( $grad1_bck, $grad2_bck),
     url("../recursos/background.jpg");
-    min-height: 70vh;
+    min-height: 50vh;
     width: 100%;
     background-size:cover;
     object-fit: cover;
     background-position: center;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 35% 65%;
+    grid-template-rows: auto;
     align-items: center;
     justify-items: center;
 
