@@ -1,5 +1,9 @@
 .footer {
-
+    display: flex;
+    background-color: $violeta;
+    align-items: center;
+    justify-content: center;
+    
     &__redes {
         display: flex;
         justify-content: center;
@@ -16,8 +20,7 @@
 
     }
     &__iconos {
-        width: 70px;
-        height: 70px;
-        margin: 12px;
+        width: 3rem;
+        margin: 6px;
     }
 }

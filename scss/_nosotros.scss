@@ -1,25 +1,30 @@
 .nosotros {
-    padding: 16px;
-    
+    padding: 1rem;
     &__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas:    "nosotros__imagen nosotros__parrafo"
-                            "nosotros__imagen nosotros__parrafo";
-    column-gap: 5px;
+    grid-template-areas:    "nosotros__parrafo nosotros__imagen"
+                            "nosotros__parrafo nosotros__imagen";
+    justify-items: center;
+    align-items: stretch;
+    row-gap: 1rem;
     }
 
     &__imagen {
         grid-area: nosotros__imagen;
         width: 100%;
+        justify-self: start;
+        padding-right: 1rem;
+        object-fit: cover;
     }
 
     &__parrafo {
         grid-area: nosotros__parrafo;
-        width: 100%;
-        text-align: center;
-
+        width: 95%;
+        text-align: start;
         font-family: $font-secundaria;
+        justify-self: start;
     }
+
 }

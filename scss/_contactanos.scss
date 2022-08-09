@@ -2,8 +2,8 @@
     display: flex;
     align-items: center;
     padding: 1rem;
-    justify-content: space-evenly;
     flex-wrap: wrap;
+    justify-content: center;
 
     &__form {
         display: flex;
@@ -76,6 +76,7 @@
             display: flex;
             align-items: baseline;
         }
+
 }
 
         

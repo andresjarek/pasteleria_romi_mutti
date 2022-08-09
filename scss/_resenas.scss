@@ -1,60 +1,33 @@
-.resenas__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:    "resenas1 resenas2"
-                            "resenas3 resenas4" 
-                            "resenas5 resenas6"
-                            "resenas7 resenas8";                           
-    row-gap: 25px;
-    column-gap: 25px;
-    font-family: $font-secundaria;
-    font-size: 1rem;
-    color: $rosa;
-    width: 100%;
-    padding: 10px;
-    font-style: italic;
+.resenas {
     
+    &__card {
+        display: flex;
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+        background-color: black;
 
-    &__comments {
-        background-color: $blanco;
+    &__img-client {
+        display: flex;
     }
 
-    &__resenas1 {
-        grid-area: resenas1;
+    &__card-interior {
+        background-image: linear-gradient( $grad1_bck, $grad2_bck),
+        url("../recursos/background.jpg");
 
-    }
-    &__resenas2 {
-        grid-area: resenas2;
 
+        }
     }
-    &__resenas3 {
-        grid-area: resenas3;
 
-    }
-    &__resenas4 {
-        grid-area: resenas4;
+    &__texto {
+        display: flex;
+        font-style: oblique;
+        font-family: $font-secundaria;
+        color: $blanco; 
+        width: 400px;       
 
-    }
-    &__resenas5 {
-        grid-area: resenas5;
+    } 
 
-    }
-    &__resenas6 {
-        grid-area: resenas6;
-
-    }
-    &__resenas7 {
-        grid-area: resenas7;
-
-        
-    }
-    &__resenas8 {
-        grid-area: resenas8;
-
-    }
-    
 }
-
-
 
