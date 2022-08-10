@@ -1,33 +1,46 @@
 .resenas {
     
     &__card {
-        display: flex;
-        text-align: center;
+        display: grid;
         flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: stretch;
+        grid-template-columns: 50 50;
+        grid-template-areas: "odd even";
         background-color: black;
-
+    }
     &__img-client {
-        display: flex;
+        height: fit-content;
+        width: fit-content;
+        margin-right: 2em;
     }
 
     &__card-interior {
         background-image: linear-gradient( $grad1_bck, $grad2_bck),
         url("../recursos/background.jpg");
+        display: flex;
+        border-radius: 25%;
+        padding: 5%;
+        margin: 5%;
 
 
         }
-    }
+    
 
     &__texto {
         display: flex;
         font-style: oblique;
         font-family: $font-secundaria;
         color: $blanco; 
-        width: 400px;       
+        width: 400px; 
+        text-align: center;
+        align-items: center;     
 
     } 
 
 }
 
+.odd{
+    grid-area: "odd";
+}
+.even {
+    grid-area: "even";
+}
