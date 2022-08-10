@@ -1,11 +1,6 @@
 .resenas {
     
-    &__subtitulos {
-        text-align: center;
-        font-family: $font-secundaria;
-        font-weight: bolder;
-        color: $violeta;
-    }
+
     &__card {
         display: grid;
         flex-wrap: wrap;
