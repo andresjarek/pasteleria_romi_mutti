@@ -187,24 +187,41 @@ $flex-direction: (
     display: flex;
     align-items: baseline; }
 
+.resenas__subtitulos {
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bolder;
+  color: #9f82b2; }
+
 .resenas__card {
   display: grid;
   flex-wrap: wrap;
   grid-template-columns: 50 50;
   grid-template-areas: "odd even";
-  background-color: black; }
+  background-color: #fff7f4;
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+  column-gap: 35px; }
 
 .resenas__img-client {
   height: fit-content;
   width: fit-content;
-  margin-right: 2em; }
+  margin-right: 2em;
+  width: 70px;
+  height: 59px;
+  border-radius: 100%; }
 
 .resenas__card-interior {
   background-image: linear-gradient(rgba(90, 85, 85, 0.7), rgba(66, 54, 30, 0.905)), url("../recursos/background.jpg");
   display: flex;
-  border-radius: 25%;
-  padding: 5%;
-  margin: 5%; }
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  padding: 2%;
+  margin: 2%;
+  height: 35vh;
+  width: 25vw; }
 
 .resenas__texto {
   display: flex;
@@ -280,7 +297,18 @@ $flex-direction: (
   .nosotros {
     /* NOSOTROS MEDIAQUERIES max-width:899px */
     grid-template-columns: 1fr;
-    grid-template-areas: "nosotros__parrafo" "nosotros__imagen"; } }
+    grid-template-areas: "nosotros__parrafo" "nosotros__imagen"; }
+  .resenas__card {
+    /*  RESEÑAS MEDIAQUERIES max-width:899px */
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: 50;
+    grid-template-areas: "odd"  "even";
+    background-color: #fff7f4;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    column-gap: 35px; } }
 
 @media only screen and (max-width: 899px) and (max-width: 479px) {
   /*  PARTE SUPERIOR PAG PRINCIPAL MEDIAQUERIES max-width:479px */

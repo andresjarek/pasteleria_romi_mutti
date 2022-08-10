@@ -25,7 +25,6 @@
             }
     }
 
-
 }
 
 @media only screen and  (max-width:899px) {
@@ -56,7 +55,20 @@
         grid-template-areas:    "nosotros__parrafo"
                                 "nosotros__imagen";
         }
+                
+    .resenas__card { /*  RESEÑAS MEDIAQUERIES max-width:899px */
+        display: grid;
+        flex-wrap: wrap;
+        grid-template-columns: 50 ;
+        grid-template-areas: "odd" 
+                                "even";
+        background-color: $blanco;
+        justify-content: center;
+        text-align: center;
+        justify-items: center;
+        column-gap: 35px;
     
+        }
 
 @media only screen and (max-width:479px) {
         /*  PARTE SUPERIOR PAG PRINCIPAL MEDIAQUERIES max-width:479px */
