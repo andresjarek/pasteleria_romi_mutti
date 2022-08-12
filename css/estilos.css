@@ -1,26 +1,6 @@
 @charset "UTF-8";
 /* --COLORES PAGINA-- */
 /* --FUENTES PAGINAS-- */
-/* 
-$justify-center: (
-    justify-content: center
-);
-$justify-start: (
-    justify-content: flex-start
-);
-$justify-spc-around: (
-    justify-content: space-around
-);
-$flex-direction: (
-    flex-direction: column
-);
- */
-/* $titulos: (
-    h1: 4rem,
-    h2: 3rem,
-    h5: 1rem,
-    )
- */
 /* EXTEND */
 .contenido-centrado, .principal__titulo, .principal__boton {
   justify-content: center;
@@ -145,7 +125,8 @@ $flex-direction: (
   align-items: center;
   padding: 1rem;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  min-height: 75vh; }
   .contacto__form {
     display: flex;
     flex-direction: column;
@@ -187,12 +168,6 @@ $flex-direction: (
     display: flex;
     align-items: baseline; }
 
-.resenas__subtitulos {
-  text-align: center;
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: bolder;
-  color: #9f82b2; }
-
 .resenas__card {
   display: grid;
   flex-wrap: wrap;
@@ -215,13 +190,15 @@ $flex-direction: (
 .resenas__card-interior {
   background-image: linear-gradient(rgba(90, 85, 85, 0.7), rgba(66, 54, 30, 0.905)), url("../recursos/background.jpg");
   display: flex;
+  align-items: center;
+  flex-direction: column;
   justify-content: space-around;
   flex-wrap: wrap;
   border-radius: 15px;
   padding: 2%;
   margin: 2%;
-  height: 35vh;
-  width: 25vw; }
+  height: 50vh;
+  width: 44vw; }
 
 .resenas__texto {
   display: flex;
@@ -300,17 +277,13 @@ $flex-direction: (
     grid-template-areas: "nosotros__parrafo" "nosotros__imagen"; }
   .resenas__card {
     /*  RESEÑAS MEDIAQUERIES max-width:899px */
-    display: grid;
-    flex-wrap: wrap;
     grid-template-columns: 50;
-    grid-template-areas: "odd"  "even";
-    background-color: #fff7f4;
-    justify-content: center;
-    text-align: center;
-    justify-items: center;
-    column-gap: 35px; } }
+    grid-template-areas: "odd"  "even"; }
+    .resenas__card__card-interior {
+      height: 30vh;
+      width: 70vw; } }
 
-@media only screen and (max-width: 899px) and (max-width: 479px) {
+@media only screen and (max-width: 479px) {
   /*  PARTE SUPERIOR PAG PRINCIPAL MEDIAQUERIES max-width:479px */
   .principal {
     min-height: 30vh; }
@@ -339,6 +312,13 @@ $flex-direction: (
       margin: 2px; }
     .contacto__input {
       width: 100%; }
+  .resenas__card {
+    /*  RESEÑAS MEDIAQUERIES max-width:479px */
+    grid-template-columns: 50;
+    grid-template-areas: "odd"  "even"; }
+    .resenas__card__card-interior {
+      height: 20vh;
+      width: 90vw; }
   /* NOSOTROS MEDIAQUERIES max-width:479px */
   .nosotros__container {
     display: grid;

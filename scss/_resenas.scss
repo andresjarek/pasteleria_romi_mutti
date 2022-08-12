@@ -26,13 +26,15 @@
         background-image: linear-gradient( $grad1_bck, $grad2_bck),
         url("../recursos/background.jpg");
         display: flex;
+        align-items: center;
+        flex-direction: column;
         justify-content: space-around;
         flex-wrap: wrap;
         border-radius: 15px;
         padding: 2%;
         margin: 2%;
-        height: 35vh;
-        width: 25vw;
+        height: 50vh;
+        width: 44vw;
         }
     
     &__texto {

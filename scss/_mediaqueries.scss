@@ -57,18 +57,18 @@
         }
                 
     .resenas__card { /*  RESEÑAS MEDIAQUERIES max-width:899px */
-        display: grid;
-        flex-wrap: wrap;
         grid-template-columns: 50 ;
         grid-template-areas: "odd" 
                                 "even";
-        background-color: $blanco;
-        justify-content: center;
-        text-align: center;
-        justify-items: center;
-        column-gap: 35px;
-    
-        }
+
+        &__card-interior {
+            height: 30vh;
+            width: 70vw;
+            }
+            
+           
+    }
+}
 
 @media only screen and (max-width:479px) {
         /*  PARTE SUPERIOR PAG PRINCIPAL MEDIAQUERIES max-width:479px */
@@ -111,6 +111,17 @@
             width: 100%;
         }
     }
+    .resenas__card { /*  RESEÑAS MEDIAQUERIES max-width:479px */
+        grid-template-columns: 50 ;
+        grid-template-areas: "odd" 
+                                "even";
+
+        &__card-interior {
+            height: 20vh;
+            width: 90vw;
+            }
+        
+    }
 
         /* NOSOTROS MEDIAQUERIES max-width:479px */
 
@@ -133,7 +144,5 @@
             text-align: center;
             }
         }
-    }
-
-        
+    
 }
