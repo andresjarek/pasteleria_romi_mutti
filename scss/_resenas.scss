@@ -20,8 +20,7 @@
     }
 
     &__card-interior {
-        background-image: linear-gradient( $grad1_bck, $grad2_bck),
-        url("../recursos/background.jpg");
+        background-image: linear-gradient(rgba(168, 167, 150, 0.7), rgba(102, 98, 84, 0.905)), url("../recursos/background.jpg");
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -37,12 +36,21 @@
         display: flex;
         font-style: oblique;
         font-family: $font-secundaria;
-        color: $blanco; 
+        color: black; 
         width: 100%; 
         word-wrap: break-word;
         text-align: center;
-        align-items: center;     
+        align-items: center;  
+        font-weight: 500;   
+        flex-direction: column;
     } 
+    &__firma {
+        font-family: $font-secundaria;
+        color: black;
+    }
+    &__star {
+        width: 5rem;
+    }
 }
 
 .odd{
