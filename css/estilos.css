@@ -1,25 +1,6 @@
+@charset "UTF-8";
 /* --COLORES PAGINA-- */
 /* --FUENTES PAGINAS-- */
-/* 
-$justify-center: (
-    justify-content: center
-);
-$justify-start: (
-    justify-content: flex-start
-);
-$justify-spc-around: (
-    justify-content: space-around
-);
-$flex-direction: (
-    flex-direction: column
-);
- */
-/* $titulos: (
-    h1: 4rem,
-    h2: 3rem,
-    h5: 1rem,
-    )
- */
 /* EXTEND */
 .contenido-centrado, .principal__titulo, .principal__boton {
   justify-content: center;
@@ -31,36 +12,40 @@ $flex-direction: (
 .navbar-expand-lg .navbar-collapse {
   justify-content: end; }
 
-.footer__redes {
+.footer {
   display: flex;
-  justify-content: center;
+  background-color: #9f82b2;
   align-items: center;
-  padding: 1px; }
-
-.footer__derechos {
-  display: flex;
-  justify-content: center;
-  text-decoration: underline;
-  color: black; }
-
-.footer__iconos {
-  width: 70px;
-  height: 70px;
-  margin: 12px; }
+  justify-content: center; }
+  .footer__redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px; }
+  .footer__derechos {
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    color: black; }
+  .footer__iconos {
+    width: 3rem;
+    margin: 6px; }
 
 .principal {
+  /* PARTE SUPERIOR PRINCIPAL PAGE ESTILOS */
   display: grid;
   background-image: linear-gradient(rgba(90, 85, 85, 0.7), rgba(66, 54, 30, 0.905)), url("../recursos/background.jpg");
-  min-height: 70vh;
+  min-height: 60vh;
   width: 100%;
   background-size: cover;
   object-fit: cover;
   background-position: center;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 35% 65%;
-  align-items: center;
-  justify-items: center; }
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: stretch; }
   .principal__titulo {
+    /* NOMBRE EMPRESA */
     grid-column: 2/3;
     grid-row: 1/2;
     display: flex;
@@ -68,15 +53,17 @@ $flex-direction: (
   .principal__titulo__estilos {
     font-size: 4rem; }
   .principal__boton {
+    /* BOTON PAG PRINCIPAL */
     grid-column: 2/3;
     grid-row: 2/3;
     display: flex; }
   .principal__mainbutton {
+    /* ESTILOS DEL BOTON PRINCIPAL */
     width: 40vw;
     height: 10vh;
     font-size: 2rem; }
 
-/* GRID 2DA SECTION INDEX */
+/* PARTE INFERIOR PAGINA PRINCIPAL IMAGENES Y PARRAFO*/
 .end {
   margin: 0px; }
   .end__contenedor {
@@ -84,7 +71,7 @@ $flex-direction: (
     object-fit: cover;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "torta macarons copitas" "parrafo parrafo parrafo";
+    grid-template-areas: "torta macarons copitas" "parrafo parrafo parrafo";
     gap: 2px;
     padding-top: 2px; }
   .end__torta__gridarea {
@@ -101,7 +88,8 @@ $flex-direction: (
     object-fit: cover;
     padding: 5px;
     text-align: center;
-    align-items: center; }
+    align-items: center;
+    margin-top: 10px; }
   .end__imagenes {
     object-fit: cover;
     width: 100%;
@@ -117,7 +105,8 @@ $flex-direction: (
   transition: all 0.23s; }
 
 .card-text {
-  color: #e994be; }
+  color: #e994be;
+  font-family: "Roboto Condensed", sans-serif; }
 
 .card-body {
   display: flex;
@@ -136,8 +125,9 @@ $flex-direction: (
   display: flex;
   align-items: center;
   padding: 1rem;
+  flex-wrap: wrap;
   justify-content: space-evenly;
-  flex-wrap: wrap; }
+  min-height: 90vh; }
   .contacto__form {
     display: flex;
     flex-direction: column;
@@ -179,63 +169,84 @@ $flex-direction: (
     display: flex;
     align-items: baseline; }
 
-.resenas__container {
+.resenas__card {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: "resenas1 resenas2" "resenas3 resenas4"  "resenas5 resenas6" "resenas7 resenas8";
-  row-gap: 25px;
-  column-gap: 25px;
+  flex-wrap: wrap;
+  grid-template-columns: 50 50;
+  grid-template-areas: "odd even";
+  background-color: #fff7f4;
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+  column-gap: 35px; }
+
+.resenas__img-client {
+  width: 100px;
+  height: 110px;
+  border-radius: 100%; }
+
+.resenas__card-interior {
+  background-image: linear-gradient(rgba(90, 85, 85, 0.7), rgba(66, 54, 30, 0.905)), url("../recursos/background.jpg");
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 15px;
+  padding: 2%;
+  margin: 2%;
+  height: 50vh;
+  width: 44vw; }
+
+.resenas__texto {
+  display: flex;
+  font-style: oblique;
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 1rem;
-  color: #e994be;
+  color: #fff7f4;
   width: 100%;
-  padding: 10px;
-  font-style: italic; }
-  .resenas__container__comments {
-    background-color: #fff7f4; }
-  .resenas__container__resenas1 {
-    grid-area: resenas1; }
-  .resenas__container__resenas2 {
-    grid-area: resenas2; }
-  .resenas__container__resenas3 {
-    grid-area: resenas3; }
-  .resenas__container__resenas4 {
-    grid-area: resenas4; }
-  .resenas__container__resenas5 {
-    grid-area: resenas5; }
-  .resenas__container__resenas6 {
-    grid-area: resenas6; }
-  .resenas__container__resenas7 {
-    grid-area: resenas7; }
-  .resenas__container__resenas8 {
-    grid-area: resenas8; }
+  word-wrap: break-word;
+  text-align: center;
+  align-items: center; }
+
+.odd {
+  grid-area: "odd"; }
+
+.even {
+  grid-area: "even"; }
 
 .nosotros {
-  padding: 16px; }
+  padding: 1rem; }
   .nosotros__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "nosotros__imagen nosotros__parrafo" "nosotros__imagen nosotros__parrafo";
-    column-gap: 5px; }
+    grid-template-areas: "nosotros__parrafo nosotros__imagen" "nosotros__parrafo nosotros__imagen";
+    justify-items: center;
+    align-items: stretch;
+    column-gap: 2rem; }
   .nosotros__imagen {
     grid-area: nosotros__imagen;
-    width: 100%; }
+    width: 100%;
+    justify-self: start;
+    padding-right: 1rem;
+    object-fit: cover; }
   .nosotros__parrafo {
     grid-area: nosotros__parrafo;
     width: 100%;
-    text-align: center;
-    font-family: "Roboto Condensed", sans-serif; }
+    text-align: start;
+    font-family: "Roboto Condensed", sans-serif;
+    justify-self: start; }
 
 @media only screen and (min-width: 900px) {
   .principal {
+    /*  PARTE SUPERIOR PAG PRINCIPAL MEDIAQUERIES min-width:900px */
     grid-template-columns: 1fr 6fr 1fr; }
     .principal__titulo {
+      /* NOMBRE EMPRESA */
       display: flex;
       font-size: 25px; }
   .end {
-    grid-template-areas: "torta macarons copitas" "parrafo parrafo parrafo"; }
+    /*  PARTE INFERIOR PAG PRINCIPAL MEDIAQUERIES min-width:900px */
+    grid-template-areas: "torta macarons copitas" "parrafo parrafo parrafo"; }
     .end__parrafo {
       text-align: center;
       width: 100%; }
@@ -244,54 +255,104 @@ $flex-direction: (
       height: 50vh; } }
 
 @media only screen and (max-width: 899px) {
+  /* PRINCIPAL MEDIAQUERIES max-width:899px */
   .principal {
+    /* PARTE SUPERIOR PAG PRINCIPAL */
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: auto; }
-  .contacto {
-    flex-direction: row; }
   .end__contenedor {
+    /* PARTE INFERIOR PAG PRINCIPAL MEDIAQUERIES max-width:899px */
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "torta parrafo" "macarons copitas"; }
-  .resenas__container {
-    grid-template-columns: 1fr;
-    grid-template-areas: "resenas1"  "resenas2" "resenas3"  "resenas4"  "resenas5" "resenas6" "resenas7"  "resenas8"; }
-  .footer__derechos {
-    display: flex;
-    justify-content: center; }
-    .footer__derechos__iconos {
-      width: 40px;
-      height: 40px; } }
+    grid-template-areas: "torta parrafo" "macarons copitas"; }
+  .contacto {
+    /* CONTACTANOS MEDIAQUERIES max-width:899px */
+    flex-direction: row; }
+    .contacto__input {
+      width: 100%; }
+  .nosotros {
+    padding: 1rem; }
+    .nosotros__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "nosotros__parrafo nosotros__imagen" "nosotros__parrafo nosotros__parrafo";
+      justify-items: center;
+      align-items: stretch;
+      row-gap: 1rem; }
+    .nosotros__parrafo {
+      grid-area: nosotros__parrafo;
+      width: 95%;
+      text-align: start;
+      font-family: "Roboto Condensed", sans-serif;
+      justify-self: start;
+      word-wrap: break-word; }
+    .nosotros__imagen {
+      grid-area: nosotros__imagen;
+      justify-self: start;
+      padding-right: 1rem;
+      object-fit: cover; }
+  .resenas__card {
+    /*  RESEÑAS MEDIAQUERIES max-width:899px */
+    grid-template-columns: 50;
+    grid-template-areas: "odd"  "even"; }
+    .resenas__card__card-interior {
+      height: 40vh;
+      width: 70vw; }
+    .resenas__card__img-client {
+      width: 70px;
+      height: 80px; } }
 
 @media only screen and (max-width: 479px) {
-  .principal__mainbutton {
-    width: 50vw;
-    height: 8vh;
-    font-size: 20px; }
+  /*  PARTE SUPERIOR PAG PRINCIPAL MEDIAQUERIES max-width:479px */
+  .principal {
+    min-height: 30vh; }
+    .principal__mainbutton {
+      /* ESTILOS DE BOTON */
+      width: 50vw;
+      height: 8vh;
+      font-size: 20px; }
+    .principal__titulo__estilos {
+      /* ESTILOS DE NOMBRE EMPRESA */
+      font-size: 3rem; }
+  /*  PARTE INFERIOR PAG PRINCIPAL MEDIAQUERIES  max-width:479px */
   .end__contenedor {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "torta" "macarons" "copitas"  "parrafo"; }
+    grid-template-areas: "parrafo" "torta" "macarons" "copitas"; }
+  /* CONTACTANOS MEDIAQUERIES max-width:479px */
   .contacto {
-    flex-direction: row; }
+    /* ALINEADO  */
+    flex-direction: row;
+    text-align: center; }
     .contacto__boton {
+      /* DIMENSIONES BOTONES */
       width: 16vw;
       height: 4vh;
       margin: 2px; }
     .contacto__input {
       width: 100%; }
-  .resenas__container {
-    grid-template-columns: 1fr;
-    grid-template-areas: "resenas1"  "resenas2" "resenas3"  "resenas4"  "resenas5" "resenas6" "resenas7"  "resenas8"; }
+  .resenas__card {
+    /*  RESEÑAS MEDIAQUERIES max-width: 479px */
+    grid-template-columns: 50;
+    grid-template-areas: "odd"  "even"; }
+    .resenas__card .resenas__card-interior {
+      height: 40vh;
+      width: 70vw; }
+    .resenas__card .resenas__img-client {
+      width: 50px;
+      height: 60px; }
+  /* NOSOTROS MEDIAQUERIES max-width:479px */
   .nosotros__container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "nosotros__imagen" "nosotros__parrafo";
-    column-gap: 5px; }
+    grid-template-areas: "nosotros__imagen" "nosotros__parrafo"; }
     .nosotros__container__imagen {
+      /* AREA IMAGEN BATIDOR */
       grid-area: nosotros__imagen;
       width: 100%; }
     .nosotros__container__parrafo {
+      /* AREA Y ESTILOS DEL PARRAFO */
       grid-area: nosotros__parrafo;
       width: 100%;
       text-align: center; } }
@@ -304,27 +365,38 @@ $flex-direction: (
   box-sizing: border-box; }
 
 .body__default {
+  /* ESTILOS POR DEFECTO DE BODY */
   font-family: "Bebas Neue", cursive;
   color: #9f82b2;
   background-color: #fff7f4; }
 
 .header__default {
+  /* ESTILOS POR DEFECTO DE HEADER */
   background-color: #fff7f4; }
 
 main {
+  /* ESTILOS POR DEFECTO DE MAIN */
   background-color: #fff7f4; }
 
 .titulos__etiquetas {
-  text-align: center; }
+  /* ESTILOS PESTAÑAS PAGINAS -INDEX-PRODUCTOS-CONTACTANOS-NOSOTROS-RESEÑAS- */
+  text-align: center;
+  background-image: linear-gradient(rgba(90, 85, 85, 0.7), rgba(66, 54, 30, 0.905)), url("../recursos/background.jpg");
+  min-height: 1rem; }
 
-/* --ESTILOS DE BOTON-- */
+/* --ESTILO DE BOTONES-- */
 .botones {
   background-color: #9f82b2;
+  /* COLOR FONDO BOTON */
   border: #9f82b2 solid 1px;
+  /* COLOR CONTORNO BOTON */
   border-radius: 10px;
-  color: #fff7f4; }
+  /* REDONDEADO ESQUINAS  */
+  color: #fff7f4;
+  /* COLOR LETRAS BOTON */ }
 
 .botones:hover {
+  /* EFECTO DE BOTON */
   background-image: linear-gradient(100deg, #9f82b1, #7a6f86);
   transform: scale(1.05, 1.05);
   transition: all 1s; }

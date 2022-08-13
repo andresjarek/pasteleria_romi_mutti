@@ -1,15 +1,15 @@
 @media only screen and (min-width:900px) {
 
-    .principal {
+    .principal {/*  PARTE SUPERIOR PAG PRINCIPAL MEDIAQUERIES min-width:900px */
         grid-template-columns: 1fr 6fr 1fr;
         
-        &__titulo {
+        &__titulo {  /* NOMBRE EMPRESA */
             display: flex;
             font-size: 25px;
             }
     }
     
-    .end {
+    .end {  /*  PARTE INFERIOR PAG PRINCIPAL MEDIAQUERIES min-width:900px */
         grid-template-areas:    
                                 "torta macarons copitas"
                                 "parrafo parrafo parrafo";
@@ -28,92 +28,135 @@
 }
 
 @media only screen and  (max-width:899px) {
-    
-    .principal {
+            /* PRINCIPAL MEDIAQUERIES max-width:899px */
+
+    .principal {    /* PARTE SUPERIOR PAG PRINCIPAL */
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-rows: auto;
-        }
+        }    
 
-    .contacto {
-        flex-direction: row;
-        }
-
-
-
-    .end__contenedor {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:     "torta parrafo"
-                            "macarons copitas";
-    }  
-
-    .resenas__container {
-        grid-template-columns: 1fr;
-        grid-template-areas:    "resenas1" 
-                                "resenas2"
-                                "resenas3" 
-                                "resenas4" 
-                                "resenas5"
-                                "resenas6"
-                                "resenas7" 
-                                "resenas8";                           
-    }
-    
-    .footer__derechos {
-        display: flex;
-        justify-content: center;
         
-        &__iconos {
-            width: 40px;
-            height: 40px;
+    .end__contenedor {/* PARTE INFERIOR PAG PRINCIPAL MEDIAQUERIES max-width:899px */
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:     "torta parrafo"
+                                "macarons copitas";
+    }  
+        
+    .contacto {/* CONTACTANOS MEDIAQUERIES max-width:899px */
+        flex-direction: row;
+        
+        &__input {      
+            width: 100%;
+        }
+    }
+
+    .nosotros {
+        padding: 1rem;
+        &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:    "nosotros__parrafo nosotros__imagen"
+                                "nosotros__parrafo nosotros__parrafo";
+        justify-items: center;
+        align-items: stretch;
+        row-gap: 1rem;
+        }
+        &__parrafo {
+                grid-area: nosotros__parrafo;
+                width: 95%;
+                text-align: start;
+                font-family: $font-secundaria;
+                justify-self: start;
+                word-wrap: break-word;
             }
+        &__imagen {
+            grid-area: nosotros__imagen;
+            justify-self: start;
+            padding-right: 1rem;
+            object-fit: cover;
+
+        }
+    
+    }
+    .resenas__card { /*  RESEÑAS MEDIAQUERIES max-width:899px */
+        grid-template-columns: 50 ;
+        grid-template-areas: "odd" 
+                                "even";
+
+        &__card-interior {
+                height: 40vh;
+                width: 70vw;
+                }
+        
+        &__img-client {
+            width: 70px;
+            height: 80px;
+        }
+            
     }
 }
 
 @media only screen and (max-width:479px) {
-    
-    .principal__mainbutton {
-            width: 50vw;
-            height: 8vh;
-            font-size: 20px;
+        /*  PARTE SUPERIOR PAG PRINCIPAL MEDIAQUERIES max-width:479px */
+    .principal {
+        min-height: 30vh;
+        &__mainbutton {/* ESTILOS DE BOTON */
+                width: 50vw;
+                height: 8vh;
+                font-size: 20px;
+            }
+        &__titulo__estilos {/* ESTILOS DE NOMBRE EMPRESA */
+            font-size: 3rem;
         }
-        
+            
+    }       /*  PARTE INFERIOR PAG PRINCIPAL MEDIAQUERIES  max-width:479px */
     .end__contenedor {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-template-areas:   
+                                "parrafo"
                                 "torta"
                                 "macarons"
-                                "copitas" 
-                                "parrafo";
+                                "copitas";
         
     }
 
-    .contacto {
+        /* CONTACTANOS MEDIAQUERIES max-width:479px */
+
+    .contacto { /* ALINEADO  */
         flex-direction: row;
-    
-        &__boton {
+        text-align: center;
+
+        &__boton { /* DIMENSIONES BOTONES */
             width: 16vw;
             height: 4vh;
             margin: 2px;
         }
 
-        &__input {
+        &__input { 
             width: 100%;
         }
     }
+    .resenas__card { /*  RESEÑAS MEDIAQUERIES max-width: 479px */
+        grid-template-columns: 50 ;
+        grid-template-areas: "odd" 
+                                "even";
 
-    .resenas__container {
-    grid-template-columns: 1fr;
-    grid-template-areas:    "resenas1" 
-                            "resenas2"
-                            "resenas3" 
-                            "resenas4" 
-                            "resenas5"
-                            "resenas6"
-                            "resenas7" 
-                            "resenas8";                           
+    .resenas__card-interior {
+            height: 40vh;
+            width: 70vw;
+            }
+    
+    .resenas__img-client {
+        width: 50px;
+        height: 60px;
     }
+           
+    }
+    
 
+        /* NOSOTROS MEDIAQUERIES max-width:479px */
 
     .nosotros__container {
         display: grid;
@@ -121,20 +164,18 @@
         grid-template-rows: auto;
         grid-template-areas:    "nosotros__imagen"
                                 "nosotros__parrafo";
-        column-gap: 5px;
+      
         
-        &__imagen {
+        &__imagen { /* AREA IMAGEN BATIDOR */
                 grid-area: nosotros__imagen;
                 width: 100%;
                 }
 
-        &__parrafo {
+        &__parrafo {    /* AREA Y ESTILOS DEL PARRAFO */
             grid-area: nosotros__parrafo;
             width: 100%;
             text-align: center;
             }
+        }
     
-    }
-
-        
 }

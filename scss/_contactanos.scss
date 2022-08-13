@@ -2,19 +2,22 @@
     display: flex;
     align-items: center;
     padding: 1rem;
-    justify-content: space-evenly;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    min-height: 90vh;
 
     &__form {
         display: flex;
         flex-direction: column;
         align-content: space-around;
+        
         }
     
         &__label {
             display: flex;           
             flex-direction: column;
             align-items: center;
+            
         }   
         &__celdas {
             padding: 5px;
@@ -76,6 +79,7 @@
             display: flex;
             align-items: baseline;
         }
+
 }
 
         

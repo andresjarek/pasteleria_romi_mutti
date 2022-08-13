@@ -18,37 +18,38 @@
     box-sizing: border-box;
 }
 
-.body__default {
+.body__default {    /* ESTILOS POR DEFECTO DE BODY */
     font-family: $font-principal;
     color:$violeta;
     background-color:$blanco;
 }
 
-.header__default {
+.header__default {      /* ESTILOS POR DEFECTO DE HEADER */
     background-color: $blanco;
 }
 
-main {
+main {          /* ESTILOS POR DEFECTO DE MAIN */
     background-color:$blanco;
 }
 
-.titulos__etiquetas {
-
+.titulos__etiquetas {       /* ESTILOS PESTAÑAS PAGINAS -INDEX-PRODUCTOS-CONTACTANOS-NOSOTROS-RESEÑAS- */
     text-align: center;
-    
+    background-image: linear-gradient( $grad1_bck, $grad2_bck),
+    url("../recursos/background.jpg");
+    min-height: 1rem;
 }
 
 
-/* --ESTILOS DE BOTON-- */
+            /* --ESTILO DE BOTONES-- */
 .botones {
-    background-color:$violeta;
-    border: $violeta solid 1px;
-    border-radius: 10px;
-    color:$blanco; 
+    background-color:$violeta;      /* COLOR FONDO BOTON */
+    border: $violeta solid 1px; /* COLOR CONTORNO BOTON */
+    border-radius: 10px; /* REDONDEADO ESQUINAS  */
+    color:$blanco; /* COLOR LETRAS BOTON */
     
 }
 
-.botones:hover {
+.botones:hover {        /* EFECTO DE BOTON */
     background-image: linear-gradient(100deg, $grad1_bot, $grad2_bot);
     transform: scale(1.05,1.05);
     transition: all 1s;

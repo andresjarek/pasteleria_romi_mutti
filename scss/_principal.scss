@@ -1,38 +1,38 @@
-.principal {
+.principal {        /* PARTE SUPERIOR PRINCIPAL PAGE ESTILOS */
     display: grid;
     background-image: linear-gradient( $grad1_bck, $grad2_bck),
     url("../recursos/background.jpg");
-    min-height: 70vh;
+    min-height: 60vh;
     width: 100%;
     background-size:cover;
     object-fit: cover;
     background-position: center;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 35% 65%;
-    align-items: center;
+    grid-template-rows: auto;
     justify-items: center;
+    align-items: stretch;
 
-    &__titulo {
+    &__titulo {     /* NOMBRE EMPRESA */
         grid-column:2/3;
         grid-row: 1/2;
         display: flex;
         @extend .contenido-centrado;
         text-align: center;
         }
-        &__titulo__estilos {
+        &__titulo__estilos {    
             font-size: 4rem;
         }
     
 
 
-    &__boton {
+    &__boton {      /* BOTON PAG PRINCIPAL */
         grid-column: 2/3;
         grid-row: 2/3;
         display: flex;
         @extend .contenido-centrado;
         }
 
-    &__mainbutton {
+    &__mainbutton {     /* ESTILOS DEL BOTON PRINCIPAL */
         width: 40vw;
         height: 10vh;
         font-size: 2rem;
