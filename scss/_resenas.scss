@@ -1,6 +1,5 @@
 .resenas {
     
-
     &__card {
         display: grid;
         flex-wrap: wrap;
@@ -14,11 +13,9 @@
 
     }
     &__img-client {
-        height: fit-content;
-        width: fit-content;
-        margin-right: 2em;
-        width: 70px;
-        height: 59px;
+
+        width:100px ;
+        height: 110px;
         border-radius: 100%;
     }
 
@@ -29,7 +26,6 @@
         align-items: center;
         flex-direction: column;
         justify-content: space-around;
-        flex-wrap: wrap;
         border-radius: 15px;
         padding: 2%;
         margin: 2%;
@@ -42,7 +38,8 @@
         font-style: oblique;
         font-family: $font-secundaria;
         color: $blanco; 
-        width: 400px; 
+        width: 100%; 
+        word-wrap: break-word;
         text-align: center;
         align-items: center;     
     } 

@@ -88,7 +88,8 @@
     object-fit: cover;
     padding: 5px;
     text-align: center;
-    align-items: center; }
+    align-items: center;
+    margin-top: 10px; }
   .end__imagenes {
     object-fit: cover;
     width: 100%;
@@ -125,8 +126,8 @@
   align-items: center;
   padding: 1rem;
   flex-wrap: wrap;
-  justify-content: center;
-  min-height: 75vh; }
+  justify-content: space-evenly;
+  min-height: 90vh; }
   .contacto__form {
     display: flex;
     flex-direction: column;
@@ -180,11 +181,8 @@
   column-gap: 35px; }
 
 .resenas__img-client {
-  height: fit-content;
-  width: fit-content;
-  margin-right: 2em;
-  width: 70px;
-  height: 59px;
+  width: 100px;
+  height: 110px;
   border-radius: 100%; }
 
 .resenas__card-interior {
@@ -193,7 +191,6 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  flex-wrap: wrap;
   border-radius: 15px;
   padding: 2%;
   margin: 2%;
@@ -205,7 +202,8 @@
   font-style: oblique;
   font-family: "Roboto Condensed", sans-serif;
   color: #fff7f4;
-  width: 400px;
+  width: 100%;
+  word-wrap: break-word;
   text-align: center;
   align-items: center; }
 
@@ -224,7 +222,7 @@
     grid-template-areas: "nosotros__parrafo nosotros__imagen" "nosotros__parrafo nosotros__imagen";
     justify-items: center;
     align-items: stretch;
-    row-gap: 1rem; }
+    column-gap: 2rem; }
   .nosotros__imagen {
     grid-area: nosotros__imagen;
     width: 100%;
@@ -233,7 +231,7 @@
     object-fit: cover; }
   .nosotros__parrafo {
     grid-area: nosotros__parrafo;
-    width: 95%;
+    width: 100%;
     text-align: start;
     font-family: "Roboto Condensed", sans-serif;
     justify-self: start; }
@@ -272,16 +270,37 @@
     .contacto__input {
       width: 100%; }
   .nosotros {
-    /* NOSOTROS MEDIAQUERIES max-width:899px */
-    grid-template-columns: 1fr;
-    grid-template-areas: "nosotros__parrafo" "nosotros__imagen"; }
+    padding: 1rem; }
+    .nosotros__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "nosotros__parrafo nosotros__imagen" "nosotros__parrafo nosotros__parrafo";
+      justify-items: center;
+      align-items: stretch;
+      row-gap: 1rem; }
+    .nosotros__parrafo {
+      grid-area: nosotros__parrafo;
+      width: 95%;
+      text-align: start;
+      font-family: "Roboto Condensed", sans-serif;
+      justify-self: start;
+      word-wrap: break-word; }
+    .nosotros__imagen {
+      grid-area: nosotros__imagen;
+      justify-self: start;
+      padding-right: 1rem;
+      object-fit: cover; }
   .resenas__card {
     /*  RESEÑAS MEDIAQUERIES max-width:899px */
     grid-template-columns: 50;
     grid-template-areas: "odd"  "even"; }
     .resenas__card__card-interior {
-      height: 30vh;
-      width: 70vw; } }
+      height: 40vh;
+      width: 70vw; }
+    .resenas__card__img-client {
+      width: 70px;
+      height: 80px; } }
 
 @media only screen and (max-width: 479px) {
   /*  PARTE SUPERIOR PAG PRINCIPAL MEDIAQUERIES max-width:479px */
@@ -313,12 +332,15 @@
     .contacto__input {
       width: 100%; }
   .resenas__card {
-    /*  RESEÑAS MEDIAQUERIES max-width:479px */
+    /*  RESEÑAS MEDIAQUERIES max-width: 479px */
     grid-template-columns: 50;
     grid-template-areas: "odd"  "even"; }
-    .resenas__card__card-interior {
-      height: 20vh;
-      width: 90vw; }
+    .resenas__card .resenas__card-interior {
+      height: 40vh;
+      width: 70vw; }
+    .resenas__card .resenas__img-client {
+      width: 50px;
+      height: 60px; }
   /* NOSOTROS MEDIAQUERIES max-width:479px */
   .nosotros__container {
     display: grid;

@@ -8,7 +8,7 @@
                             "nosotros__parrafo nosotros__imagen";
     justify-items: center;
     align-items: stretch;
-    row-gap: 1rem;
+    column-gap: 2rem;
     }
 
     &__imagen {
@@ -21,10 +21,11 @@
 
     &__parrafo {
         grid-area: nosotros__parrafo;
-        width: 95%;
+        width: 100%;
         text-align: start;
         font-family: $font-secundaria;
         justify-self: start;
     }
-
+    
 }
+
