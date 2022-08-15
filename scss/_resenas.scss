@@ -36,7 +36,7 @@
         display: flex;
         font-style: oblique;
         font-family: $font-secundaria;
-        color: black; 
+        color: $negro; 
         width: 100%; 
         word-wrap: break-word;
         text-align: center;
@@ -46,7 +46,7 @@
     } 
     &__firma {
         font-family: $font-secundaria;
-        color: black;
+        color: $negro;
     }
     &__star {
         width: 5rem;
