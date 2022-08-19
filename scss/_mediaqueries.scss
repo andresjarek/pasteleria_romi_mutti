@@ -23,6 +23,10 @@
             width: 100%;
             height: 50vh;
             }
+    }    
+    .nosotros {/*  NOSOTROS MEDIAQUERIES min-width:900px */
+        min-height: 90vh;
+        
     }
 
 }
@@ -38,7 +42,9 @@
         
     .end__contenedor {/* PARTE INFERIOR PAG PRINCIPAL MEDIAQUERIES max-width:899px */
         grid-template-columns: 1fr 1fr;
-        grid-template-areas:     "torta parrafo"
+        grid-template-areas:     
+                                "parrafo parrafo"
+                                "torta torta" 
                                 "macarons copitas";
     }  
         
@@ -50,36 +56,9 @@
         }
     }
 
-    .nosotros {/* NOSOTROS MEDIAQUERIES max-width:899px */
-        padding: 1rem;
-        &__container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:    "nosotros__parrafo nosotros__imagen"
-                                "nosotros__parrafo nosotros__parrafo";
-        justify-items: center;
-        align-items: stretch;
-        row-gap: 1rem;
-        }
-        &__parrafo {
-                grid-area: nosotros__parrafo;
-                font-family: $font-secundaria;
-                justify-self: start;
-                word-wrap: break-word;
-                
-            }
-        &__imagen {
-            grid-area: nosotros__imagen;
-            justify-self: start;
-            padding-right: 1rem;
-            object-fit: cover;
 
-        }
-    
-    }
     .resenas__card { /*  RESEÑAS MEDIAQUERIES max-width:899px */
-        grid-template-columns: 50 ;
+        grid-template-columns: 1fr ;
         grid-template-areas: "odd" 
                                 "even";
 
@@ -94,6 +73,54 @@
         }
             
     }
+    .nosotros {/*  NOSOTROS MEDIAQUERIES max-width:899px */
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:     "nosotros__texto1"
+                                "nosotros__imagen" 
+                                "nosotros__texto2"
+                                "nosotros__texto3";
+        object-fit: cover;                        
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        column-gap: 0rem;
+        padding-right: 0rem;
+    
+    
+        &__imagen {
+            padding-left: 0rem;
+            object-fit:contain;   
+        }
+        &__img {
+            width: 90vw;
+        }
+        
+        &__texto1 {
+            font-size: 1.5em;
+            padding-right: 2rem;
+            padding-left: 1.5rem;
+            text-align: center;    
+            
+        }
+        &__texto2 {
+            font-size: 1.5em;
+            padding-right: 2rem;
+            padding-left: 1.5rem;   
+            text-align: center;  
+        }
+        
+        &__texto3 {
+            font-size: 1.5em;
+            padding-right: 1.5rem;
+            padding-left: 1.5rem;   
+            text-align: center;  
+        }
+        
+    
+    }
+    
+    
 }
 
 @media only screen and (max-width:479px) {
@@ -118,8 +145,23 @@
                                 "torta"
                                 "macarons"
                                 "copitas";
-        
+        &__parrafo__gridarea {
+            grid-area: parrafo;
+            display: flex;
+            background-color: $blanco;
+            width: 100%;
+            object-fit: cover;
+            padding: 5px;
+            text-align: center;
+            align-items: center;
+            margin-top: 10px;
+            word-break: keep-all;
+            padding: 0 1rem 0 1rem;
+            font-size: 1.5rem;
+        } 
+
     }
+    
 
         /* CONTACTANOS MEDIAQUERIES max-width:479px */
 
@@ -137,10 +179,13 @@
             width: 100%;
         }
     }
-    .resenas__card { /*  RESEÑAS MEDIAQUERIES max-width: 479px */
-        grid-template-columns: 50 ;
+    .resenas {
+    
+        &__card { /*  RESEÑAS MEDIAQUERIES max-width: 479px */
+        grid-template-columns: 1fr;
+        flex-wrap:nowrap;
         grid-template-areas: "odd" 
-                                "even";
+                            "even";
 
         &__card-interior {
             height: 40vh;
@@ -150,31 +195,53 @@
         &__img-client {
         width: 50px;
         height: 60px;
-    }
-           
+            }
+        }
     }
     
-
-        /* NOSOTROS MEDIAQUERIES max-width:479px */
-
-    .nosotros__container {
+    .nosotros {/* NOSOTROS MEDIAQUERIES max-width: 479px */
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        grid-template-areas:    "nosotros__imagen"
-                                "nosotros__parrafo";
-      
-        
-        &__imagen { /* AREA IMAGEN BATIDOR */
-                grid-area: nosotros__imagen;
-                width: 100%;
-                }
+        grid-template-areas:     "nosotros__texto1"
+                                "nosotros__imagen" 
+                                "nosotros__texto2"
+                                "nosotros__texto3";
+        object-fit: cover;                        
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        column-gap: 0rem;
+        padding-right: 0rem;
 
-        &__parrafo {    /* AREA Y ESTILOS DEL PARRAFO */
-            grid-area: nosotros__parrafo;
-            width: 100%;
-            text-align: center;
-            }
+        &__img {
+            width: 84vw;
+
         }
+        
+        &__texto1 {
+            font-size: 1em;
+            padding-right: 1.5rem;
+            padding-left: 1.5rem;
+            text-align: center;    
+            
+        }
+        &__texto2 {
+            font-size: 1em;
+            padding-right: 1.5rem;
+            padding-left: 1.5rem;   
+            text-align: center;  
+        }
+        
+        &__texto3 {
+            font-size: 1em;
+            padding-right: 1.5rem;
+            padding-left: 1.5rem;   
+            text-align: center;  
+        }
+        
     
+    }
+    
+    
+
 }
