@@ -78,7 +78,8 @@
     object-fit: cover;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "torta macarons copitas" "parrafo parrafo parrafo";
+    grid-template-areas: "torta macarons copitas"
+ "parrafo parrafo parrafo";
     gap: 2px;
     padding-top: 2px; }
   .end__torta__gridarea {
@@ -234,10 +235,13 @@
   grid-area: "even"; }
 
 .nosotros {
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  grid-template-areas: "nosotros__imagen nosotros__texto1" "nosotros__imagen nosotros__texto2" "nosotros__imagen nosotros__texto3";
+  grid-template-areas: "nosotros__imagen nosotros__texto1"
+ "nosotros__imagen nosotros__texto2"
+ "nosotros__imagen nosotros__texto3";
   object-fit: cover;
   justify-items: center;
   padding-top: 2rem;
@@ -269,7 +273,8 @@
       font-size: 25px; }
   .end {
     /*  PARTE INFERIOR PAG PRINCIPAL MEDIAQUERIES min-width:900px */
-    grid-template-areas: "torta macarons copitas" "parrafo parrafo parrafo"; }
+    grid-template-areas: "torta macarons copitas"
+ "parrafo parrafo parrafo"; }
     .end__parrafo {
       text-align: center;
       width: 100%; }
@@ -289,7 +294,9 @@
   .end__contenedor {
     /* PARTE INFERIOR PAG PRINCIPAL MEDIAQUERIES max-width:899px */
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "parrafo parrafo" "torta torta"  "macarons copitas"; }
+    grid-template-areas: "parrafo parrafo"
+ "torta torta" 
+ "macarons copitas"; }
   .contacto {
     /* CONTACTANOS MEDIAQUERIES max-width:899px */
     flex-direction: row; }
@@ -298,7 +305,8 @@
   .resenas__card {
     /*  RESEÑAS MEDIAQUERIES max-width:899px */
     grid-template-columns: 1fr;
-    grid-template-areas: "odd"  "even"; }
+    grid-template-areas: "odd" 
+ "even"; }
     .resenas__card__card-interior {
       height: 40vh;
       width: 70vw; }
@@ -310,7 +318,10 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "nosotros__texto1" "nosotros__imagen"  "nosotros__texto2" "nosotros__texto3";
+    grid-template-areas: "nosotros__texto1"
+ "nosotros__imagen" 
+ "nosotros__texto2"
+ "nosotros__texto3";
     object-fit: cover;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -353,7 +364,10 @@
   .end__contenedor {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "parrafo" "torta" "macarons" "copitas"; }
+    grid-template-areas: "parrafo"
+ "torta"
+ "macarons"
+ "copitas"; }
     .end__contenedor__parrafo__gridarea {
       grid-area: parrafo;
       display: flex;
@@ -383,7 +397,8 @@
     /*  RESEÑAS MEDIAQUERIES max-width: 479px */
     grid-template-columns: 1fr;
     flex-wrap: nowrap;
-    grid-template-areas: "odd"  "even"; }
+    grid-template-areas: "odd" 
+ "even"; }
     .resenas__card__card-interior {
       height: 40vh;
       width: 70vw; }
@@ -395,7 +410,10 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "nosotros__texto1" "nosotros__imagen"  "nosotros__texto2" "nosotros__texto3";
+    grid-template-areas: "nosotros__texto1"
+ "nosotros__imagen" 
+ "nosotros__texto2"
+ "nosotros__texto3";
     object-fit: cover;
     padding-top: 1rem;
     padding-bottom: 1rem;
