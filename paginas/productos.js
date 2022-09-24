@@ -60,16 +60,13 @@ function sumCart(items) {
 
 
 
-products.forEach(item => {
-  console.log(item.id, item.name, item.price);
-}); 
-products.forEach(item => {
-  console.log(item.id, item.name, item.price);
-}); 
-let name = prompt("Ingrese el nombre del producto");
-let finded = products.find((product) => product.name === name);
-let show = `
-     name: ${finded.name}
-     $${finded.price}
-   `;
-alert(show);
+
+  let name = prompt('Ingrese el nombre del producto');
+  let found = products.filter((product) => product.name.toLowerCase().search(name) !== -1 );
+  console.log(found)
+  let show = ''
+  found.forEach((prod) => {show +=`
+       name: ${prod.name}
+       $${prod.price}
+     `})
+  alert(show);
