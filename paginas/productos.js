@@ -1,37 +1,39 @@
 const cart = []
-
+const insert = document.getElementById('insert');
 const products = [
-{ id: 1, name: "Macarons x 6 u.", price:2000, img: 'https://drive.google.com/file/d/1Cp0sGUvEatFLF-DQLorOyWR6tVKLQzBu/view?usp=sharing'},
-{ id: 2, name: "Brownie con frutillas", price:3500, img: 'https://drive.google.com/file/d/1-Q297un5J2Ee3EDj4eKchRho1owDC1Gs/view?usp=sharing'},
-{ id: 3, name: "Torta en fondant personalizada", price:3000, img: 'https://drive.google.com/file/d/1QfEYzXac4XTU9hpcGN_cClBX3nJkYkch/view?usp=sharing'},
-{ id: 4, name: "Chessecake NY", price:2700, img: 'https://drive.google.com/file/d/1tYIW4LzS76A-w3JkDsiuUtb3UWvxsm6G/view?usp=sharing'},
-{ id: 5, name: "Budin glaseado", price:2300, img: 'https://drive.google.com/file/d/1DG0zjMTN1JHZE5Qmv28ZCtMlNbkEia4n/view?usp=sharing' },
-{ id: 6, name: "Alfajores de maicena x 6 u.", price:1500, img: 'https://drive.google.com/file/d/1J6G_Xwek2jh8t8NUys_3wDS6i1m5NWao/view?usp=sharing' },
-{ id: 7, name: "Letter/Number Cake", price:2500, img: 'https://drive.google.com/file/d/1oIF56VjWxI2oRhlIIxbyKmn8IsUBDIGI/view?usp=sharing' },
-{ id: 8, name: "Shots Dulces x 12 u.", price:2500, img: 'https://drive.google.com/file/d/1rfJQEmiSgzvS3u0WcBuUFWGmBa_jmAdY/view?usp=sharing' },
-{ id: 9, name: "Tarteletas x 3 u.", price:2200, img: 'https://drive.google.com/file/d/1eVvL_rDUre2pbJefoYoO_16y_E-raofu/view?usp=sharing' },
-{ id: 10, name: "Tortas Clásicas", price:3000, img: 'https://drive.google.com/file/d/1nv6wtbqnEJJS8UHrXEWFBLbK2QSKL8Wj/view?usp=sharing' },
-{ id: 11, name: "Torta Impresa personalizada", price:3300, img: 'https://drive.google.com/file/d/1PzOt_frGsjx0zYrRYwo8XrQIKFEWiAzu/view?usp=sharing' },
-{ id: 12, name: "Torta de confirmacion", price:3000, img: 'https://drive.google.com/file/d/1d_0evfrw8EJGG7ZZu0Y9lhxenvOACDvr/view?usp=sharing' },
-{ id: 13, name: "Torta Mousse de Frutilla", price:3500, img: 'https://drive.google.com/file/d/167sUhdkF4h0wGTlwRhP22j7FZe-ScEec/view?usp=sharing'},
-{ id: 14, name: "Tiramisu", price:2500, img: 'https://drive.google.com/file/d/1ssV9dFXomfJacw3KqG76Pw9VrJRQkYJh/view?usp=sharing' },
-{ id: 15, name: "Brucecake", price:3000, img: 'https://drive.google.com/file/d/1g6WAE_nIyriN1-33jd-ENNRgSx4kw3_J/view?usp=sharing' },
-{ id: 16, name: "Cupcakes x 6 u.", price:2000, img: 'https://drive.google.com/file/d/1RxQygGTdo-vKcuKETLaI7zmky8P8EUfG/view?usp=sharing' },
-{ id: 17, name: "Torta Oreo", price:3400, img: 'https://drive.google.com/file/d/1Bx4FsNs1p4xJuuavwWE9oT19rhMi1lYN/view?usp=sharing' },
+{ id: 1, name: "Macarons x 6 u.", price:2000, img: 'https://res.cloudinary.com/dloxcckwo/image/upload/v1664399815/romiPasteleria/macarons_aubccv.jpg'},
+{ id: 2, name: "Brownie con frutillas", price:3500, img: 'https://res.cloudinary.com/dloxcckwo/image/upload/v1664399814/romiPasteleria/brownie-fresa_ajx0b3.jpg'},
+{ id: 3, name: "Torta en fondant personalizada", price:3000, img: 'https://res.cloudinary.com/dloxcckwo/image/upload/v1664399816/romiPasteleria/perro_u72hua.jpg'},
+{ id: 4, name: "Chessecake NY", price:2700, img: 'https://res.cloudinary.com/dloxcckwo/image/upload/v1664399815/romiPasteleria/chessecakeNY_xeuqco.jpg'},
+{ id: 5, name: "Budin glaseado", price:2300, img: 'https://res.cloudinary.com/dloxcckwo/image/upload/v1664399814/romiPasteleria/budin-clasico_dua2nl.jpg' },
+{ id: 6, name: "Alfajores de maicena x 6 u.", price:1500, img: 'https://res.cloudinary.com/dloxcckwo/image/upload/v1664399815/romiPasteleria/maizena_ocymnn.jpg' },
+{ id: 7, name: "Letter/Number Cake", price:2500, img: 'https://res.cloudinary.com/dloxcckwo/image/upload/v1664399815/romiPasteleria/N_yo6yzz.jpg' },
+{ id: 8, name: "Shots Dulces x 12 u.", price:2500, img: 'https://res.cloudinary.com/dloxcckwo/image/upload/v1664399814/romiPasteleria/copitas_dejltf.jpg' },
+{ id: 9, name: "Tarteletas x 3 u.", price:2200, img: 'https://res.cloudinary.com/dloxcckwo/image/upload/v1664399816/romiPasteleria/tarteletas_cl1p5e.jpg' },
+{ id: 10, name: "Tortas Clásicas", price:3000, img: 'hhttps://res.cloudinary.com/dloxcckwo/image/upload/v1664399816/romiPasteleria/torta-blanca_qmlzct.jpg' },
+{ id: 11, name: "Torta Impresa personalizada", price:3300, img: 'https://res.cloudinary.com/dloxcckwo/image/upload/v1664399816/romiPasteleria/torta-wos_grcfus.jpg' },
+{ id: 12, name: "Torta de confirmacion", price:3000, img: 'https://res.cloudinary.com/dloxcckwo/image/upload/v1664399816/romiPasteleria/torta-confirmacion_iabxcg.jpg' },
+{ id: 13, name: "Torta Mousse de Frutilla", price:3500, img: 'https://res.cloudinary.com/dloxcckwo/image/upload/v1664399816/romiPasteleria/torta-mousse-fresa_xksa0i.jpg'},
+{ id: 14, name: "Tiramisu", price:2500, img: 'https://res.cloudinary.com/dloxcckwo/image/upload/v1664399816/romiPasteleria/tiramisu_mfjziw.jpg' },
+{ id: 15, name: "Brucecake", price:3000, img: 'https://res.cloudinary.com/dloxcckwo/image/upload/v1664399814/romiPasteleria/bruce-cake_xhuq46.jpg' },
+{ id: 16, name: "Cupcakes x 6 u.", price:2000, img: 'https://res.cloudinary.com/dloxcckwo/image/upload/v1664399814/romiPasteleria/cupcakes_u7b2u7.jpg' },
+{ id: 17, name: "Torta Oreo", price:3400, img: 'https://res.cloudinary.com/dloxcckwo/image/upload/v1664399816/romiPasteleria/torta-oreo_kfvzsk.jpg' },
 ]
-products.forEach()
-let saludo = document.getElementById("saludo");
-let sesion = prompt("Ingrese la seccion a la que desea ingresar");
-if(sesion === "carrito"){
-  saludo.innerHTML = "<h1>Bienvenido al carrito</h1>";
-  saludo.className = "verde";
-}else if(sesion === "favoritos"){
-  saludo.innerHTML = "<h1>Bienvenido a los favoritos</h1>";
-  saludo.className = "amarillo";
-}else{
-  saludo.innerHTML = "<h1>Bienvenido a nuestra página</h1>";
-  saludo.className = "azul";
-}
+
+products.forEach(product => {
+    let refreshProduct = document.createElement('div');
+    refreshProduct.innerHTML = `
+    <h5>Nombre: ${product.name}</h5>
+    <span>precio: ${product.price}</span>
+    <img src='${product.img}'>
+    `
+    insert.append(refreshProduct)
+})
+
+/* let card = document.getElementById("insert");
+let text = document.getElementById('title')
+console.log(insert.innerHTML);
+console.log(title.innerHTML); */
 
 // let maxPrice = parseInt(prompt("Ingrese su presupuesto"))
 
