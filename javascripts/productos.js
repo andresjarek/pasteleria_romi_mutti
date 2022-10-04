@@ -3,7 +3,7 @@ const htmlProducts = document.getElementById('listaDeProductos');
 const products = [
 { id: 1, name: "Macarons x 6 u.", price:2000, img: 'https://res.cloudinary.com/dloxcckwo/image/upload/v1664399815/romiPasteleria/macarons_aubccv.jpg', description:'Caja de 6 unidades. Sabor a elección - Lemoncream - Ganache de chocolate - Chocolate Blanco y Frutilla - Dulce de Leche'},
 { id: 2, name: "Brownie con frutillas", price:3500, img: 'https://res.cloudinary.com/dloxcckwo/image/upload/v1664399814/romiPasteleria/brownie-fresa_ajx0b3.jpg', description:'Brownie con nueces con cobertura de dulce de leche y crema (opciónal merengue italiano) y frutas de estación o frutos rojos'},
-{ id: 3, name: "Torta en fondant personalizada", price:3000, img: 'https://res.cloudinary.com/dloxcckwo/image/upload/v1664399816/romiPasteleria/perro_u72hua.jpg', description:'Torta 30 porciones con muñeco en porcelana y decoración'},
+{ id: 3, name: "Torta en fondant personalizada", price:3000, img: 'https://res.cloudinary.com/dloxcckwo/image/upload/v1664399816/romiPasteleria/perro_u72hua.jpg', description:'Torta de 30 porciones con muñeco en porcelana y decoración'},
 { id: 4, name: "Chessecake NY", price:2700, img: 'https://res.cloudinary.com/dloxcckwo/image/upload/v1664399815/romiPasteleria/chessecakeNY_xeuqco.jpg', description:'Tarta de queso Finlandia. Súper cremosa y riquísima! Cubierta en frutos rojos o Frutillas según disponibilidad'},
 { id: 5, name: "Budin glaseado", price:2300, img: 'https://res.cloudinary.com/dloxcckwo/image/upload/v1664399814/romiPasteleria/budin-clasico_dua2nl.jpg' , description:'Budín de vainilla, almendras, nueces, castañas de cajú y glaseado de limón'},
 { id: 6, name: "Alfajores de maicena x 6 u.", price:1500, img: 'https://res.cloudinary.com/dloxcckwo/image/upload/v1664399815/romiPasteleria/maizena_ocymnn.jpg' , description:'Alfajores de maicena con mucho dulce de leche y coco'},
@@ -20,7 +20,6 @@ const products = [
 { id: 17, name: "Torta Oreo", price:3400, img: 'https://res.cloudinary.com/dloxcckwo/image/upload/v1664399816/romiPasteleria/torta-oreo_kfvzsk.jpg' , description:'Galletas oreo, crema oreo y Dulce de leche'},
 ]
 
-
 function addToCart(item) {
     //Si es Verdad que no Encontras un cartItem.ID igual en ese Array agregá una unidad y pusheala
     if(!cart.find(cartItem => cartItem.id===item.id)){  
@@ -36,29 +35,59 @@ function addToCart(item) {
   return
 }
 
+const saveCart = () => {
+    if(cart.length !== 0) {
+        localStorage.setItem('cart', JSON.stringify(cart));
+        console.log('Se guardo el carrito');
+    }else {
+        alert('No se puede guardar un carrito vacío');
+    }
+}
+const showCart = () => {
+    if(localStorage.getItem('cart')) {
+        let localCart = localStorage.getItem('cart');
+    alert(localCart);
+    }else{
+        alert('El carrito esta vacio');
+    }
+    
+}
+
 products.forEach(product => {
     let template = `<div id=${product.id} class="card col-xs-12 col-sm-9 col-md-3 mt-2" style="width: 21rem;">
         <img src=${product.img} class="card-img-top pt-2" alt=${product.name}>
         <div class="card-body" >
             <h5 class="card-title">${product.name}</h5>
             <p class="card-text">${product.description}</p>
-            <button class="botones bot_productos"  title="Enviar">Pedilo ahora</button>
+            <button class="botones bot_productos"  title="Enviar">Agregar al carrito</button>
         </div>
     </div>`
     htmlProducts.innerHTML += template
 })
 
-
 const botonesDePedido = document.querySelectorAll(".bot_productos");
 
 botonesDePedido.forEach(btn => {
     btn.addEventListener("click", function () {
-        let idCard = parseInt(this.parentNode.parentNode.id)
+        let idCard = parseInt(this.parentNode.parentNode.parentNode.id)
         let productToAdd = products.find(product => product.id === idCard)
         addToCart(productToAdd)
-        console.log(cart)
+        // let containerDiv = document.querySelector("#selected_" + idCard)
+        // let deleteBtn = document.createElement("button");
+        // containerDiv.append(deleteBtn);
+
+
     })
 })      
+
+const cartBtn = document.querySelector("#saveCart");
+cartBtn.addEventListener('click', saveCart);
+
+const showCartBtn = document.querySelector("#showCart");
+showCartBtn.addEventListener('click', showCart);
+
+
+
 // function sumCart(items) {
 //     let total = 0
 //     for (let item of items) {
@@ -102,3 +131,23 @@ console.log(title.innerHTML); */
 //      `})
 //   alert(show);
 
+// localStorage.setItem('cart', stringify(products));
+
+// const changePrice = (name, price) => {
+//     let cart = JSON.parse(localStorage.getItem('cart'));
+//     let product = cart.find(item => item.name === name);
+
+//     product.price = price;
+//     localStorage.setItem('cart', JSON.stringify(cart));
+// };
+
+// let name = prompt('Ingrese el nombre del producto');
+// let price = prompt('Ingrese el precio del producto');
+
+// changePrice(name, price);
+
+// const eliminar = (nombre) => {let carrito = JSON.parse(localStorage.getItem("cart"));cart = carrito.filter(item => item.nombre != nombre);
+// localStorage.setItem("carrito", JSON.stringify(carrito));
+// };
+// let nombre = prompt("Ingrese el nombre del producto");
+// eliminar(nombre);
