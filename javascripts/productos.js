@@ -35,6 +35,7 @@ function addToCart(item) {
   return
 }
 
+
 const saveCart = () => {
     if(cart.length !== 0) {
         localStorage.setItem('cart', JSON.stringify(cart));
@@ -48,10 +49,12 @@ const showCart = () => {
         let localCart = localStorage.getItem('cart');
     alert(localCart);
     }else{
-        alert('El carrito esta vacio');
+        alert('El carrito esta vacío');
     }
     
 }
+// const showCartBtn = document.querySelector("#showCart");
+// showCartBtn.addEventListener('click', showCart);
 
 products.forEach(product => {
     let template = `<div id=${product.id} class="card col-xs-12 col-sm-9 col-md-3 mt-2" style="width: 21rem;">
@@ -75,8 +78,6 @@ botonesDePedido.forEach(btn => {
         // let containerDiv = document.querySelector("#selected_" + idCard)
         // let deleteBtn = document.createElement("button");
         // containerDiv.append(deleteBtn);
-
-
     })
 })      
 
@@ -85,8 +86,6 @@ cartBtn.addEventListener('click', saveCart);
 
 const showCartBtn = document.querySelector("#showCart");
 showCartBtn.addEventListener('click', showCart);
-
-
 
 // function sumCart(items) {
 //     let total = 0
@@ -97,15 +96,47 @@ showCartBtn.addEventListener('click', showCart);
 //     return total
 //   }
 
-//-----------------------------------------
+searchBtn.forEach(btn => {
+    btn.addEventListener("click", function () {
+        let idCard = parseInt(this.parentNode.parentNode.parentNode.id)
+        let productToAdd = products.find(product => product.id === idCard)
+        addToCart(productToAdd)
+    })
+})      
+
+
+
+
+  let name = prompt('Ingrese el nombre del producto');
+  let found = products.filter((product) => product.name.toLowerCase().search(name) !== -1 );
+  
+  let show = ''
+  found.forEach((product) => {show +=`
+       name: ${product.name}
+       $${product.price}
+     `})
+  alert(show);
+
+// const searchBtn = document.querySelector("#searchBtn");
+// searchBtn.addEventListener('click', searchBtn);
+
+// localStorage.setItem('cart', stringify(products));
+
+// const changePrice = (name, price) => {
+//     let cart = JSON.parse(localStorage.getItem('cart'));
+//     let product = cart.find(item => item.name === name);
+
+//     product.price = price;
+//     localStorage.setItem('cart', JSON.stringify(cart));
+// };
 
 /* let card = document.getElementById("insert");
 let text = document.getElementById('title')
 console.log(insert.innerHTML);
 console.log(title.innerHTML); */
 
-// let maxPrice = parseInt(prompt("Ingrese su presupuesto"))
 
+// let maxPrice = parseInt(prompt("Ingrese su presupuesto"))
 // let filtered = products.filter(product => product.price <= maxPrice);
 
 // let message = "Estos son los productos disponibles"
@@ -118,28 +149,6 @@ console.log(title.innerHTML); */
 // alert(message);
 
 
-
-
-
-//   let name = prompt('Ingrese el nombre del producto');
-//   let found = products.filter((product) => product.name.toLowerCase().search(name) !== -1 );
-  
-//   let show = ''
-//   found.forEach((prod) => {show +=`
-//        name: ${prod.name}
-//        $${prod.price}
-//      `})
-//   alert(show);
-
-// localStorage.setItem('cart', stringify(products));
-
-// const changePrice = (name, price) => {
-//     let cart = JSON.parse(localStorage.getItem('cart'));
-//     let product = cart.find(item => item.name === name);
-
-//     product.price = price;
-//     localStorage.setItem('cart', JSON.stringify(cart));
-// };
 
 // let name = prompt('Ingrese el nombre del producto');
 // let price = prompt('Ingrese el precio del producto');
