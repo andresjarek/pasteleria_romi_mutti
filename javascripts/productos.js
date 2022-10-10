@@ -35,6 +35,20 @@ function addToCart(item) {
   return
 }
 
+function removeFromCart(item) {
+    if(cart.find(cartItem => cartItem.id===item.id)){  
+        cart.map(cartItem => {
+            if(cartItem.id===item.id){
+                if(cartItem.quantity>1){    
+                    cartItem.quantity--}
+                else{
+                    cart = cart.filter(cartItem => cartItem.id !== item.id)
+                }
+    }})} else {
+         console.log("No se encontró el item")
+    }
+  return
+}
 
 const saveCart = () => {
     if(cart.length !== 0) {
@@ -54,14 +68,11 @@ function sumCart(items) {
     return total
   }
 const showCart = () => {
-    if(localStorage.getItem('cart')) {
-        let localCart = localStorage.getItem('cart');
-    alert(localCart);
-    }else{
-        alert('El carrito esta vacío');
+    let localCart = localStorage.getItem('cart') ? localStorage.getItem('cart') : 'El carrito esta vacío';
+    alert(localCart)
     }
     
-}
+
 
 const renderProducts = (productList, targetHTML) =>{
     targetHTML.innerHTML =''
@@ -78,6 +89,36 @@ const renderProducts = (productList, targetHTML) =>{
     })
 }
 
+const renderCart = (cart, targetHTML) =>{
+    targetHTML.innerHTML =''
+    cart.forEach(product => {
+        let template = `<div id=${product.id} class="card col-xs-12 col-sm-9 col-md-3 mt-2" style="width: 21rem;">
+            <img src=${product.img} class="card-img-top pt-2" alt=${product.name}>
+            <div class="card-body" >
+                <h5 class="card-title">${product.name}</h5>
+                <p class="card-text">${product.description}</p>
+                <p>${product.quantity}</p>
+                <buttonn class= 'addBtn'>+</button>
+                <button class= 'removeBtn'>-</button>
+            </div>
+        </div>`
+        targetHTML.innerHTML += template
+    })
+    let addBtn = document.querySelectorAll('.addBtn');
+    let removeBtn = document.querySelectorAll('.removeBtn');
+    addBtn.forEach(btn => {
+        btn.addEventListener("click", function(){
+        let idCard = parseInt(this.parentNode.parentNode.id)
+        let productToAdd = products.find(product => product.id === idCard)
+        addToCart(productToAdd)})
+    })
+    removeBtn.forEach(btn => {
+        btn.addEventListener("click", function(){
+        let idCard = parseInt(this.parentNode.parentNode.id)
+        let productToRemove = products.find(product => product.id === idCard)
+        removeFromCart(productToRemove)})
+    })
+}
 renderProducts(products,htmlProducts)
 
 
@@ -101,18 +142,6 @@ const showCartBtn = document.querySelector("#showCart");
 showCartBtn.addEventListener('click', showCart);
 
 
-
-  
-//Asi es con el button
-// const searchBtn = document.querySelector("#searchBtn");
-// searchBtn.addEventListener('click', () => {
-//     let name = prompt('Ingrese el nombre del producto');
-//     let found = products.filter((product) => product.name.toLowerCase().search(name) !== -1 );
-//     renderProducts(found, htmlProducts)
-// });
-
-
-//Asi es con el  input
 const searchBar = document.querySelector("#searchBar");
 searchBar.addEventListener('change', () => {
     console.log(searchBar.value)
