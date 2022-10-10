@@ -44,6 +44,15 @@ const saveCart = () => {
         alert('No se puede guardar un carrito vacío');
     }
 }
+
+function sumCart(items) {
+    let total = 0
+    for (let item of items) {
+      let subtotal = item.price * item.quantity
+      total += subtotal
+    }
+    return total
+  }
 const showCart = () => {
     if(localStorage.getItem('cart')) {
         let localCart = localStorage.getItem('cart');
@@ -53,26 +62,30 @@ const showCart = () => {
     }
     
 }
-// const showCartBtn = document.querySelector("#showCart");
-// showCartBtn.addEventListener('click', showCart);
 
-products.forEach(product => {
-    let template = `<div id=${product.id} class="card col-xs-12 col-sm-9 col-md-3 mt-2" style="width: 21rem;">
-        <img src=${product.img} class="card-img-top pt-2" alt=${product.name}>
-        <div class="card-body" >
-            <h5 class="card-title">${product.name}</h5>
-            <p class="card-text">${product.description}</p>
-            <button class="botones bot_productos"  title="Enviar">Agregar al carrito</button>
-        </div>
-    </div>`
-    htmlProducts.innerHTML += template
-})
+const renderProducts = (productList, targetHTML) =>{
+    targetHTML.innerHTML =''
+    productList.forEach(product => {
+        let template = `<div id=${product.id} class="card col-xs-12 col-sm-9 col-md-3 mt-2" style="width: 21rem;">
+            <img src=${product.img} class="card-img-top pt-2" alt=${product.name}>
+            <div class="card-body" >
+                <h5 class="card-title">${product.name}</h5>
+                <p class="card-text">${product.description}</p>
+                <button class="botones bot_productos"  title="Enviar">Pedilo ahora</button>
+            </div>
+        </div>`
+        targetHTML.innerHTML += template
+    })
+}
+
+renderProducts(products,htmlProducts)
+
 
 const botonesDePedido = document.querySelectorAll(".bot_productos");
 
 botonesDePedido.forEach(btn => {
     btn.addEventListener("click", function () {
-        let idCard = parseInt(this.parentNode.parentNode.parentNode.id)
+        let idCard = parseInt(this.parentNode.parentNode.id)
         let productToAdd = products.find(product => product.id === idCard)
         addToCart(productToAdd)
         // let containerDiv = document.querySelector("#selected_" + idCard)
@@ -87,38 +100,37 @@ cartBtn.addEventListener('click', saveCart);
 const showCartBtn = document.querySelector("#showCart");
 showCartBtn.addEventListener('click', showCart);
 
-// function sumCart(items) {
-//     let total = 0
-//     for (let item of items) {
-//       let subtotal = item.price * item.quantity
-//       total += subtotal
-//     }
-//     return total
-//   }
-
-searchBtn.forEach(btn => {
-    btn.addEventListener("click", function () {
-        let idCard = parseInt(this.parentNode.parentNode.parentNode.id)
-        let productToAdd = products.find(product => product.id === idCard)
-        addToCart(productToAdd)
-    })
-})      
 
 
-
-
-  let name = prompt('Ingrese el nombre del producto');
-  let found = products.filter((product) => product.name.toLowerCase().search(name) !== -1 );
   
-  let show = ''
-  found.forEach((product) => {show +=`
-       name: ${product.name}
-       $${product.price}
-     `})
-  alert(show);
-
+//Asi es con el button
 // const searchBtn = document.querySelector("#searchBtn");
-// searchBtn.addEventListener('click', searchBtn);
+// searchBtn.addEventListener('click', () => {
+//     let name = prompt('Ingrese el nombre del producto');
+//     let found = products.filter((product) => product.name.toLowerCase().search(name) !== -1 );
+//     renderProducts(found, htmlProducts)
+// });
+
+
+//Asi es con el  input
+const searchBar = document.querySelector("#searchBar");
+searchBar.addEventListener('change', () => {
+    console.log(searchBar.value)
+    let toSearch = searchBar.value
+    if(!searchBar.value){
+        return renderProducts(products,htmlProducts)
+    }
+    let found = products.filter((product) => product.name.toLowerCase().search(toSearch) !== -1 );
+    renderProducts(found, htmlProducts)
+    return
+});
+
+const resetBar = document.querySelector("#resetBar");
+resetBar.addEventListener('click', ()=>{
+    searchBar.value=''
+    renderProducts(products,htmlProducts)
+})
+
 
 // localStorage.setItem('cart', stringify(products));
 
